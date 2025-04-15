@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code marginalia</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        main {
+            width: 800px;
+        }
+
+        .comment {}
+
+        .comment-text {
+            /* visibility: hidden; */
+            display: none;
+
+            padding: 2rem;
+
+
+            width: 50%;
+            transform: translateX(-100%);
+
+
+
+        }
+
+        .comment-marker {
+            display: inline-block;
+            cursor: pointer;
+
+            background-color: palegreen;
+            border-radius: 1rem;
+            width: 2rem;
+            height: 1rem;
+        }
+
+
+        .footnote {}
+
+
+        .footnote-marker {
+            /* display: inline-block; */
+
+            background-color: paleturquoise;
+            border-radius: 1rem;
+            padding: 0 1rem 0 1rem;
+            border: 1px solid black;
+
+            font-size: .8rem;
+
+            cursor: pointer;
+        }
+
+        .footnote-text {
+
+            display: none;
+            padding: 2rem;
+        }
+
+
+        .show {
+            /* visibility: visible; */
+            display: block;
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 1.7rem;
+        }
+
+
+        .foot{
+            background-color: tomato;
+            width: 100px;
+            border: 1px solid black;
+        }
+
+
+
+        .footnote-number {
+            background-color: brown;
+            vertical-align:middle;
+            font-size: smaller;
+            border-radius: 0.5em;
+            display: inline-flex;
+            width: 1em;            
+            height: 1em;
+            justify-content: center;
+            align-items: center;
+            line-height: 1;     
+            text-align: center;  
+        }
+
+
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+    <main>
+        <p> One of my first PC memories is sitting in front of the family PC running Windows 98 doodling in Paint. I
+            don‘t
+            have any recollection of surfing the web at this age. This changed with me getting my very first laptop in
+            2002
+            – I was 10 or 11 years old at that point.
+            <span class="comment"><span class="comment-marker"></span> <span class="comment-text">I‘ve just talked to my
+                    dad about it – unlike me, he has a
+                    good memory. He bought the laptop on sale at a Real near Berlin in 2002.</span></span>
+            With this I also got my own connection to the internet at some point – probably by still plugging in a cable
+            from the router into the LAN port of my
+            Laptop. With a personal device and a connection to the internet I was well on my way in becoming a very
+            online
+            teen. With the spread of social media and microblogging in the mid 2000s I had a cringy MySpace page and was
+            later very active on tumblr. Both sites had the possibility to customize your page or blog. <span
+                class="footnote"> <span class="footnote-marker">1</span><span class="footnote-text">Here is a really
+                    nice segment about the shift from personalized social media profiles like MySpace to a unified
+                    visual apperance. <a href="#"
+                        onclick="openPopup('https://share.transistor.fm/s/92d2f3fe', 800, 600)">EP 23 Neverpost – Looks
+                        Great: The End of Personalization</a></span></span> I really
+            enjoyed
+            all creativity people had with styling and personalizing their little web spaces, yet I never did that for
+            myself, because I was very afraid of coding. With MySpace I‘m not so sure anymore how I customized it – but
+            like tumblr it also had a
+
+
+            <a href="#"
+                onclick="openPopup('https://www.codecademy.com/resources/blog/myspace-and-the-coding-legacy/', 800, 600)">code</a>
+
+            editor. With tumblr however I vividly
+            remember this moment of me opening the custom css panel many times and closing it again and again in fear.
+            In
+            the end I always used themes – not that this is bad or worse in any way from doing it yourself. However for
+            me
+            personally it had somewhat of an sour aftertaste, because I always wanted to make my own stuff but was not
+            able
+            to out of fear and feelings of inadequacy. While researching this thesis and thinking about my relation to
+            code
+            a lot of memories from my childhood and early teens came back to me. I remembered why I originally used to
+            be so
+            afraid of coding – it was the <em>Informationstechnischer Grundkurs</em> I had in 2005, which was seventh
+            grade
+            for me. 
+            
+            <sup class="foot">1</sup>
+        </p>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function openPopup(url, width, height) {
+            let left = (screen.width - width) / 2;
+            let top = (screen.height - height) / 2;
+            let popup = window.open(url, 'popupWindow', `width=${width},height=${height},top=${top},left=${left},resizable=yes,scrollbars=yes`);
+
+            if (popup) {
+                popup.focus();
+            } else {
+                alert('Popup blocked! Please allow popups for this site.');
+            }
+        }
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".comment-marker").forEach(marker => {
+                marker.addEventListener("click", function () {
+                    this.closest(".comment").querySelector(".comment-text").classList.toggle("show");
+                });
+            });
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".footnote-marker").forEach(marker => {
+                marker.addEventListener("click", function () {
+                    this.closest(".footnote").querySelector(".footnote-text").classList.toggle("show");
+                });
+            });
+        });
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

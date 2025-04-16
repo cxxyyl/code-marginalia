@@ -7,6 +7,8 @@
 
     <style>
         body{
+        background-color: lightblue;
+
         height: 100vh;
 
         padding: 0;
@@ -24,7 +26,12 @@
             height: 1rem;
             width: 3rem;
             display: inline-block;
-            border-radius: 1rem;}
+            border-radius: 1rem;
+            border-style: dotted;
+            border-width: 1px;
+
+        }
+            
     </style>
 
     
@@ -75,8 +82,16 @@
                     figure.appendChild(figcaption);
 
                     // give style and text content to the html elements
-                    figcaption.textContent = `background: radial-gradient(${gradientInside}, ${gradientOutside})`; 
-                    div.style.background=`radial-gradient(${gradientInside}, ${gradientOutside})`;
+        
+                    div.style.background =`radial-gradient(${gradientInside}, transparent)`;
+                    div.style.borderColor = `${gradientOutside}`;
+                    figcaption.textContent = `background: radial-gradient(${gradientInside}, transparent 60%); border: 1px dashed ${gradientOutside}; `;  
+           
+
+                    // div.style.background=`radial-gradient(${gradientInside}, ${gradientOutside})`;
+                    // figcaption.textContent = `background: radial-gradient(${gradientInside}, ${gradientOutside})`;  
+
+                    
                     
                     // put them into the html document
                     document.body.appendChild(figure);

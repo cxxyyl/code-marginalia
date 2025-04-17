@@ -144,8 +144,8 @@
         margin: 0;
         
         /* Delete space between rows and columns */
-        border-spacing:0;
-        border-collapse:collapse;   
+        border-spacing: 0;
+        border-collapse: collapse;   
     }
 
 
@@ -154,8 +154,63 @@
     /* Space from Top and Bottom of the page */
     .spacer-table{
         padding: 5rem 0rem !important;
+        white-space: wrap;
     }
 
+
+
+
+
+
+    /* Cramped State */
+
+    .stretch-messages{
+        position: fixed;
+        top: calc(50vh + 5px);
+        left: 50vw;
+        transform: translate( -50%,  -50%);
+
+        font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+
+        user-select: none;
+        pointer-events: none;
+
+        color: var(--fontColor);
+    }
+ 
+    #cramped,  #stretch{
+        opacity: 0;
+        transition: opacity 500ms ease;
+    }
+
+    /* #stretch{
+        text-align: right;
+    } */
+
+
+
+    @media screen and (max-width: 1500px)  {
+        .text{
+           opacity: 0;
+           user-select: none;
+           pointer-events: none;   
+        } 
+
+        #cramped{opacity: 1;}
+    }
+
+    @media screen and (max-width: 1350px)  {
+        #stretch{opacity: 1;}
+
+        .comment{
+            opacity: 0;
+            user-select: none;
+            pointer-events: none; 
+        }
+    }
 
 
 
@@ -167,7 +222,15 @@
         font-size: 1.3rem;
         line-height: 1.5rem;
         font-weight: 400;
+
         color: var(--fontColor);
+
+        animation: headlineAnimation 30s ease infinite ;
+    }
+
+    @keyframes headlineAnimation {
+        0%, 100%{font-weight: 400;}
+        50% {font-weight: 450;}
     }
 
     /* h2{} */
@@ -180,6 +243,11 @@
         padding: 0 3rem;
         color: var(--fontColor);
 
+        /* hyphens:auto; 
+        hyphenate-limit-chars: 7 3 3; */
+
+        transition: opacity 500ms ease;
+        
         /* Past Stylings */
         /* border-left: 1px solid var(--chapterAccent); */
         /* border-right: 1px solid var(--chapterAccent); */
@@ -290,6 +358,8 @@
         line-height: 1.5rem;
 
         color: var(--fontColor);
+
+        transition: opacity 500ms ease;
     }
 
     .comment span{

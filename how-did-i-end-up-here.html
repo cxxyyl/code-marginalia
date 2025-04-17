@@ -26,11 +26,12 @@ how will I deal with the bitmapped images? can i I color them?
 
 
 
-<!-- Test out three colums for margins  –– works! -->
+<!--  -->
+
 
 <!-- 
 Ideas
-
+- test out three colums for margins ---------------------------------- 🐸 works!
 - custom border + color for every comment + comment link ------------- 🌙 in progress 
 - animate borders? --------------------------------------------------- 🐸 yes, but i dont like how it looks 
 – gradients in borders? ---------------------------------------------- 🐸 no, not how i want them
@@ -39,7 +40,7 @@ Ideas
 - think about hover interactions ------------------------------------- 🐸 yes! font-weight, width and gradient transitions
 - perma selection ---------------------------------------------------- 🌙 works 90% of time, makes messy code
     - cookies for long term storage ---------------------------------- 🍄
-- animate headline (fontweight over time -> slow!) ------------------- 🍄
+- animate headline (fontweight over time -> slow!) ------------------- 🐸
 - transition colors between chapters ? ------------------------------- 🍄 need to think about that
 - load in animations for all td.text ? ------------------------------- 🍄 need to think about that
 - hyphenation -------------------------------------------------------- 🍄
@@ -47,14 +48,11 @@ Ideas
 - how will i deal with the bitmapped images?
 
 
--->
-
-
-<!-- responsiveness
- 
+responsiveness
 - large screen make marginalia a bit wider on wider screens ---------- 🐸
 - center on large screens -------------------------------------------- 🐸
-- make middle td disappear, when on small screen --------------------- 🍄
+- make middle td disappear, when on small screen --------------------- 🐸
+
 
 -->
 
@@ -85,12 +83,18 @@ Ideas
 </head>
 
 <body>
+    <aside class="stretch-messages">
+        <div id="cramped">Sorry, but I feel cramped now.</div>
+        <div id="stretch">Please stretch me!</div>
+    </aside>
+
     <main>
         <!-- just love that it‘s a table, looks great in html only as well! -->
         <table>
             <tr>
                 <td></td>
-                <td class="text spacer-table"></td>
+                <td class="text spacer-table">
+                </td>
                 <td></td>
             </tr>
             <tr>
@@ -166,7 +170,6 @@ Ideas
                         <a class="external-link" href="https://share.transistor.fm/s/92d2f3fe" target="_blank">
                         EP 23 Neverpost—Looks Great: The End of Personalization</a>
                     </span>
-                        
                 </td>
             </tr>
             <tr>

@@ -1,419 +1,482 @@
-        
-        @font-face{
-            font-family: "ABC ROM Variable";
-            src: url("/assets/fonts/ABCROMVariable-Trial.woff") format("woff"), 
-                 url("/assets/fonts/ABCROMVariable-Trial.woff2") format("woff2");
-            font-weight: 300 900;
-            /* Slant from 16 to 0  -> font-style: oblique xdeg*/
-        }
+    /* Make this ✿pretty✿ css */
 
-        @font-face{
-            font-family: "ABC ROM Mono Variable";
-            src: url("/assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff"), 
-                 url("/assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff2");
-            font-weight: 300 900;
-           /* Slant from 16 to 0  -> font-style: oblique xdeg*/
-        }
+    /* Font Import */
+    @font-face{
+        font-family: "ABC ROM Variable";
+        src: url("/assets/fonts/ABCROMVariable-Trial.woff") format("woff"), 
+                url("/assets/fonts/ABCROMVariable-Trial.woff2") format("woff2");
+        font-weight: 300 900;
+        /* Slant from 16 to 0  -> font-style: oblique xdeg*/
+    }
 
-        @font-face{
-            font-family: "ABC ROM Extended Variable";
-            src: url("/assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff"), 
-                 url("/assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff2");
-            font-weight: 300 900;
-           /* Slant from 16 to 0  -> font-style: oblique xdeg*/
-        }
+    @font-face{
+        font-family: "ABC ROM Mono Variable";
+        src: url("/assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff"), 
+                url("/assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff2");
+        font-weight: 300 900;
+        /* Slant from 16 to 0  -> font-style: oblique xdeg*/
+    }
 
-        /* I forgore how to variable font (|||❛︵❛。)  */
-        /* Okay, looked it up – ugh I whish Arc had the same typeface inspector feature as firefox. Seeing all variable font properties at once is soooo helpful */
+    @font-face{
+        font-family: "ABC ROM Extended Variable";
+        src: url("/assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff"), 
+                url("/assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff2");
+        font-weight: 300 900;
+        /* Slant from 16 to 0  -> font-style: oblique xdeg*/
+    }
 
-        :root{
-
-            /* now that it is a universal css and not in <style> anymore, rember to adapt all variables so they fit to the corresponding chapters */
-
-            /* how did i end up here */
-            --dark: gainsboro;
-            --mid: peachpuff;
-            --light: cornflowerblue; 
+    /* I forgore how to variable font (|||❛︵❛。)  */
+    /* Okay, looked it up – ugh I whish Arc had the same typeface inspector feature as firefox. Seeing all variable font properties at once is soooo helpful */
 
 
 
-       
-            /* Alternative Color Schemes */
+
+
+
+
+    :root{
+        /* ToDo: now that it is a universal css and not in <style> anymore, rember to adapt all variables so they fit to the corresponding chapters */
+
+        /* Spacers and Spacing */
+        --indent: 2rem;  /* spacing for text indent after a paragraph */
+        --margin: 26rem; /* base width of the margins */
+
+
+        /* Transitions */
+        --fontTransition: font-weight 750ms ease;
+
+        /* Colors */
+
+        /* Chapter 1:  How did I end up here ?*/
+        --chapterColor: gainsboro;
+        --chapterAccent: peachpuff;
+        --fontColor: blue; 
+
+
+        /* Alternative Color Schemes */
+            /* 
+
+            --chapterColor: lightcyan;
+            --chapterAccent: tan;
+            --fontColor: cadetblue;
             
-                /* --dark: lightcyan;
-                --mid: tan;
-                --light: cadetblue;
-                
-                
-                --dark: dodgerblue;
-                --mid: oldlace;
-                --light: blue;
             
-                --dark: blanchedalmond;
-                --mid: floralwhite;
-                --light: gainsboro;
+            --chapterColor: dodgerblue;
+            --chapterAccent: oldlace;
+            --fontColor: blue;
+        
+            --chapterColor: blanchedalmond;
+            --chapterAccent: floralwhite;
+            --fontColor: gainsboro;
+        
+
+            --chapterColor: oldlace;
+            --chapterAccent: whitesmoke;
+            --fontColor: blue;
+        
+            --chapterColor: lightblue;
+            --chapterAccent: blanchedalmond;
+            --fontColor: gray;
             
-
-                --dark: oldlace;
-                --mid: whitesmoke;
-                --light: blue;
+            --chapterColor: gainsboro;
+            --chapterAccent: peachpuff;
+            --fontColor: cornflowerblue; 
             
-                --dark: lightblue;
-                --mid: blanchedalmond;
-                --light: gray;
-                
-                --dark: gainsboro;
-                --mid: peachpuff;
-                --light: cornflowerblue; 
-                
-                
-                --dark: lightblue;
-                --mid: blanchedalmond;
-                --light: gray; 
-
-                --dark: #1a4b9f; 
-                --mid: #2974cf;
-                --light: #b4dde8;
-
-                --dark: #403424; 
-                --mid: #dea85d;
-                --light: #b4dde8;
-                
-                
-                
-                */
             
+            --chapterColor: lightblue;
+            --chapterAccent: blanchedalmond;
+            --fontColor: gray; 
 
-            --indent: 2rem; 
-            --margin: 26rem;
-             
+            --chapterColor: #1a4b9f; 
+            --chapterAccent: #2974cf;
+            --fontColor: #b4dde8;
 
-
-
+            --chapterColor: #403424; 
+            --chapterAccent: #dea85d;
+            --fontColor: #b4dde8;
+            
+            
+            */
         
-        }
+    }
 
 
 
 
-        html{
-            background-color: var(--dark);
-        }
-
-
-        body {
-            font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
-            font-size: 1.3rem;
-            line-height: 1.6rem;
-            font-weight: 300;
-
-            padding: 0;
-            margin: 0;
- 
-            /* background-image: linear-gradient(var(--dark), var(--mid), var(--dark)) */
-            background-image: radial-gradient(var(--mid), var(--dark) 70%);
-
-        }
-
-        main{
-            display: flex;
-            justify-content: center;
-        }
-
-        /* General Typography */
-
-        h1{
-            font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
-            font-size: 1.3rem;
-            line-height: 1.5rem;
-            font-weight: 400;
-            color: var(--light);
-        }
-        /* h2{} */
-
-        .text a{
-            font-family:"ABC ROM Extended Variable", Helvetica, Arial, sans-serif;
-            transition: font-weight 750ms;
-        }
-
-        .text a:hover{
-            font-weight: 600;
-        }
 
 
 
-        /* .comment a{} */
-        /* .footnote a{} */
 
-        .text em{
-            font-family:"ABC ROM Extended Variable", Helvetica, Arial, sans-serif;
-            font-style: oblique 16deg;
-            transition: all 750ms ease;
-        }
+
+
+    /* 01 Setup */
+    /* -------- */
+
+
+    html{
+        background-color: var(--chapterColor);
+    }
+
+
+    body {
+        padding: 0;
+        margin: 0;
+
+        font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        font-weight: 300;
+
+        background-image: radial-gradient(var(--chapterAccent), var(--chapterColor) 70%);
+
+
+        /* Past Stylings */
+        /* background-image: linear-gradient(var(--chapterColor), var(--chapterAccent), var(--chapterColor)) */
+    }
+
+    main{
+        display: flex;
+        justify-content: center;
+    }
+
+    table, tr{
+        padding: 0;
+        margin: 0;
         
-        
-        .comment em{
-            font-style: oblique 16deg;
-        }
-        
-        /* .footnote em{
-
-        } */
-        
-        /* 
-        em{
-
-        } */
+        /* Delete space between rows and columns */
+        border-spacing:0;
+        border-collapse:collapse;   
+    }
 
 
-        /* Layout helper */
-        .spacer-table{
-            padding: 5rem 0rem !important;
-        }
+    /* Layout helpers */
+
+    /* Space from Top and Bottom of the page */
+    .spacer-table{
+        padding: 5rem 0rem !important;
+    }
 
 
 
-        table, tr{
-            padding: 0;
-            margin: 0;
-            border-spacing:0;
-            border-collapse:collapse;
-        }
 
-        .text{
-            width: 700px;
-            padding: 0 3rem;
-            /* border-left: 1px solid var(--mid); */
-            /* border-right: 1px solid var(--mid); */
-            /* background-image: linear-gradient(90deg, transparent, var(--mid), transparent); */
-            /* background-image: linear-gradient(90deg, var(--mid), transparent, var(--mid)); */
-            color: var(--light);
+    /* 02 General Typography */
+    /* --------------------- */
+
+    h1{
+        font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+        color: var(--fontColor);
+    }
+
+    /* h2{} */
 
 
-            a{
-                color: var(--light);
-            }
-        }
+    /* Textbody */
 
-        .indent {
+    .text{
+        width: 700px;
+        padding: 0 3rem;
+        color: var(--fontColor);
+
+        /* Past Stylings */
+        /* border-left: 1px solid var(--chapterAccent); */
+        /* border-right: 1px solid var(--chapterAccent); */
+        /* background-image: linear-gradient(90deg, transparent, var(--chapterAccent), transparent); */
+        /* background-image: linear-gradient(90deg, var(--chapterAccent), transparent, var(--chapterAccent)); */
+    }
+
+
+    .indent {
+        /* spacing for text indent after a paragraph */
+        content: "";
         display: inline-block;
         width: var(--indent);
-        content: "";
-        }
+    }
 
 
 
 
 
 
-        .comment span, .comment-link {transition: --stop 750ms ease, width 750ms ease;}
+    /* Links */
+
+    .text a{
+        font-family:"ABC ROM Extended Variable", Helvetica, Arial, sans-serif;
+
+        color: var(--fontColor);
+
+        transition: var(--fontTransition);
+    }
+
+    .text a:hover{
+        font-weight: 600;
+    }
 
  
-        .comment{
-            display: flex;
-            flex-direction: column;
+    .comment a{
+        color: var(--fontColor);
 
-         
-            margin: 0rem 3rem;
+        transition: var(--fontTransition);
+    }
+
+    .comment a:hover{
+        font-weight: 800;
+    }
+
+
+    .footnote a{
+        color: var(--fontColor); 
+        transition: var(--fontTransition);
+    }
+
+    .footnote a:hover{
+        font-weight: 500;
+    }
+
+
+    .link-nav a{
+        color: var(--fontColor);
+        transition: var(--fontTransition);
+
+        /* Past Stylings */
+        /* font-family:"ABC ROM Extended Variable", Helvetica, Arial, sans-serif; */
+        /* text-decoration: none; s*/
+    }
+
+    .link-nav a:hover{
+        font-weight: 500;
+    }
+
+
+
+    /* Italic */
+
+    .text em{
+        font-family:"ABC ROM Extended Variable", Helvetica, Arial, sans-serif;
+        font-style: oblique 16deg;
+    }
+
+    .comment em{
+        font-style: oblique 16deg;
+    }
+
+    /* .footnote em{ } */
+
+
+
+
+
+
+
+
+    /* 03 Syling for Margin Elements – Comments and Footnotes */
+    /* ------------------------------------------------------ */
+
+
+    .comment{
+        display: flex;
+        flex-direction: column;
+
+        margin: 0rem 3rem;
+
+        min-width: var(--margin) !important;
+        max-width: calc( var(--margin) + 10rem) !important;
+
+        font-family:"ABC ROM Mono Variable", 'Courier New', Courier, monospace;
+        font-variant-ligatures: none;
+        letter-spacing: .05em;
+        line-height: 1.5rem;
+
+        color: var(--fontColor);
+    }
+
+    .comment span{
+        padding: 1rem;
+        width: inherit !important;
+
+        border-radius: .3rem;
+
+        /* Past Stylings */
+        /* transition: border 750ms ease , background 750ms ease ;*/
+        /* border: 1px dashed darkturquoise; */
+        /* background-image: transparent !important; */
+        /* background-image: radial-gradient(orangered,transparent, darkturquoise,transparent, transparent) !important; */
+        /* box-shadow: inset 0px 0px 20px darkturquoise; */
+    }
+
+    .comment span::before{
+        content:"<!--";
        
-            font-family:"ABC ROM Mono Variable", 'Courier New', Courier, monospace;
-            font-variant-ligatures: none;
-            letter-spacing: .05em;
-            line-height: 1.5rem;
+        padding-inline-start: .5rem;
+        padding-inline-end: .5rem;
+        border-radius: 1rem;
 
-            min-width: var(--margin) !important;
-            max-width: calc( var(--margin) + 10rem) !important;
+        color:var(--fontColor);
+    }
 
+    .comment span::after{
+        content:"-->";
 
-            color: var(--light);
+        padding-inline-start: .5rem;
+        padding-inline-end: .5rem;
+        border-radius: 1rem;
 
-            a{
-                color: var(--light);
-                transition: font-weight 750ms ease;
-            }
+        color:var(--fontColor);
+    }
 
-            a:hover{
-                font-weight: 800;
-            }
+    .comment-link{
+        display: inline-block;
 
-            span{
-                padding: 1rem;
-                border-radius: .3rem;
-                width: inherit !important;
+        height: 1rem;
+        width: 3rem;
+        border-radius: 1rem;
 
-                /* transition: border 750ms ease , background 750ms ease ;*/
-                /* border: 1px dashed darkturquoise; */
-                /* background-image: transparent !important; */
-                /* background-image: radial-gradient(orangered,transparent, darkturquoise,transparent, transparent) !important; */
-                /* box-shadow: inset 0px 0px 20px darkturquoise; */
+        cursor: none;
+    }
 
-            }
-
-            span::before{
-                content:"<!--";
-                border-radius: 1rem;
-                padding-inline-start: .5rem;
-                padding-inline-end: .5rem;
-                color:var(--light);
-            }
-
-            span::after{
-                content:"-->";
-                border-radius: 1rem;
-                padding-inline-start: .5rem;
-                padding-inline-end: .5rem;
-                color:var(--light);
-            }
-        }
-
-        .comment-link{
-            /* background-color: orangered; */
-            height: 1rem;
-            width: 3rem;
-            display: inline-block;
-            border-radius: 1rem;
-
-        }
-
-        .comment-link:hover{
-            width: 6rem;
-        }
-
-
-
-       
-
-
-        .footnote{
-            display: flex;
-            flex-direction: column;
-            margin: 0rem 3rem;
-
-            min-width: var(--margin);
-            max-width: calc( var(--margin) + 10rem);
-
-            font-size: .75em;
-            line-height: 1.25em;
-
-
-            span{
-                padding: 1rem;
-                border-radius: 1rem;
-                
-                color: var(--light);
-
-                a{
-                    color: var(--light); 
-                    transition: font-weight 750ms ease;
-                }
-
-                a:hover{
-                    font-weight: 500;
-                }
-            }
-        }
-
-        .footnote-link {
-            border: 1px var(--light) solid;
-            background-color: var(--dark);
-            vertical-align: middle;
-            border-radius: 1rem;
-            display: inline-flex;
-            width: 2rem;            
-            height: 1rem;
-            justify-content: center;
-            align-items: center;
-
-            font-size: .8rem;
-        }
+    .comment span, .comment-link {transition: --stop 750ms ease, width 750ms ease;}
 
 
 
 
 
+    .footnote{
+        display: flex;
+        flex-direction: column;
+        
+        margin: 0rem 3rem;
+        min-width: var(--margin);
+        max-width: calc( var(--margin) + 10rem);
 
-        .link-nav{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 3rem;
+        font-size: .75em;
+        line-height: 1.25em;
 
+    }
 
-            a{
-                /* font-family:"ABC ROM Extended Variable", Helvetica, Arial, sans-serif; */
-                /* text-decoration: none;  */
-                color: var(--light);
-                transition: font-weight 750ms ease;
-            }
-
-            a:hover{
-                font-weight: 500;
-            }
-
-        }
-
+    .footnote span{
+        padding: 1rem;
+        border-radius: 1rem;
+        
+        color: var(--fontColor);
+    }
 
 
 
-        /* comment-link styles */
+    .footnote-link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
 
-        /* .c1{
-            border: 1px dashed orangered;
-            background-image: radial-gradient(aliceblue, transparent 60%)
-        }
+        width: 2rem;            
+        height: 1rem;
+        border-radius: 1rem;
 
-        .c1:hover{
-            background-image: radial-gradient(aliceblue, aliceblue 60%);
-            width: 4rem;
-        }
-        */
+        font-size: .8rem;
+
+        background-color: var(--chapterColor);
+        border: 1px var(--fontColor) solid;
+    }
 
 
-        @property --stop {
+
+
+
+    .link-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding-top: 3rem;
+    }
+
+
+
+
+    /* comment-link styles */
+
+    /* To enable the transition of gradients */
+    @property --stop {
         syntax: '<percentage>';
         inherits: false;
         initial-value: 60%;
         }
 
-        .c1 {
+
+    /* Hover with js for all elements with the same of the .cNumber class */
+    .connected-hover{
+        --stop: 150% !important;
+        width: 6rem;
+    }
+
+
+    /* Custom styling for every comment-link */
+
+    /* Chapter 1:  How did I end up here ?*/
+    .c1 {
         border: 1px dashed orangered;
         background-image: radial-gradient(aliceblue, transparent var(--stop));
         --stop: 60%;
-        }
+    }
 
-      
+    .c2{
+        border: 1px dashed azure;
+        background-image: radial-gradient(darksalmon, transparent var(--stop));
+        --stop:60%;
+    }
+
+    .c3{
+        border: 1px dashed floralwhite;
+        background-image: radial-gradient(thistle, transparent var(--stop));
+        --stop:60%; }
+
+    .c4{
+        border: 1px dashed mediumaquamarine;
+        background-image: radial-gradient(lightsteelblue, transparent var(--stop));
+        --stop:60%; 
+    }
+
+   
+    .c5{
+        border: 1px dashed orange;
+        background-image: radial-gradient(olive, transparent var(--stop));
+        --stop:60%; 
+    } 
+
+    .c6{
+        border: 1px dashed mediumseagreen;
+        background-image: radial-gradient(orangered, transparent var(--stop));
+        --stop:60%; 
+    }
+
+    .c7{
+        border: 1px dashed black;
+        background-image: radial-gradient(chartreuse, transparent var(--stop));
+        --stop:60%; 
+    }
+
+    .c8{
+        border: 1px dashed blue;
+        background-image: radial-gradient(papayawhip, transparent var(--stop));
+        --stop:60%; 
+    }
 
 
-        .c2{background-image: radial-gradient(darksalmon, transparent var(--stop)); --stop:60%; border: 1px dashed azure;}
+    /* Chapter 2:  How did I end up here ?*/
 
-        .c3{background-image: radial-gradient(thistle, transparent var(--stop)); --stop:60%; border: 1px dashed floralwhite;}
+    .c9{}
 
-        .c4{background-image: radial-gradient(lightsteelblue, transparent var(--stop)); --stop:60%; border: 1px dashed mediumaquamarine;}
+    .c10{}
 
-        /* rgba(106, 142, 35, 0.431) is olive but more transparent */
-        .c5{background-image: radial-gradient(rgba(106, 142, 35, 0.431), transparent var(--stop)); --stop:60%; border: 1px dashed orange;} 
+    .c11{}
 
-        .c6{background-image: radial-gradient(orangered, transparent var(--stop)); --stop:60%; border: 1px dashed mediumseagreen}
-
-        .c7{background-image: radial-gradient(chartreuse, transparent var(--stop)); --stop:60%; border: 1px dashed black;}
-
-        .c8{background-image: radial-gradient(papayawhip, transparent var(--stop)); --stop:60%; border: 1px dashed blue;}
-
-        .c9{}
-
-        .c10{}
-
-        .c11{}
-
-        .c12{}
+    .c12{}
 
 
-        /* connect this with js */
-        .c1:hover, .c2:hover, .c3:hover, .c4:hover, .c5:hover, .c6:hover, .c7:hover, .c8:hover, .c9:hover, .c10:hover,  .c11:hover, .c12:hover, .c13:hover, .c14:hover, .c15:hover, .c16:hover, .c17:hover, .c18:hover, .c19:hover, .c20:hover, .c11:hover{
-            --stop: 150%;
-        }
 
-        
-        
+
+
 
 

@@ -48,55 +48,56 @@
         /* Colors */
 
         /* Chapter 1:  How did I end up here ?*/
-        --chapterColor: gainsboro;
-        --chapterAccent: peachpuff;
-        --fontColor: blue; 
+        --chapter1Color: gainsboro;
+        --chapter1Accent: peachpuff;
+        --font1Color: blue; 
+
+        --chapter2Color: darkseagreen;
+        --chapter2Accent: darkkhaki;
+        --font2Color: DarkOliveGreen;
 
 
         /* Alternative Color Schemes */
-            /* 
+            
 
-            --chapterColor: lightcyan;
-            --chapterAccent: tan;
-            --fontColor: cadetblue;
+            /* --chapterColor: lightcyan;
+            --chapterAccent: rgb(204, 157, 96);
+            --fontColor: cadetblue; */
             
             
-            --chapterColor: dodgerblue;
+            /* --chapterColor: dodgerblue;
             --chapterAccent: oldlace;
-            --fontColor: blue;
+            --fontColor: blue; */
         
-            --chapterColor: blanchedalmond;
+            /* --chapterColor: blanchedalmond;
             --chapterAccent: floralwhite;
-            --fontColor: gainsboro;
+            --fontColor: black; */
         
 
-            --chapterColor: oldlace;
+            /* --chapterColor: oldlace;
             --chapterAccent: whitesmoke;
-            --fontColor: blue;
+            --fontColor: blue; */
         
-            --chapterColor: lightblue;
+            /* --chapterColor: lightblue;
             --chapterAccent: blanchedalmond;
-            --fontColor: gray;
-            
-            --chapterColor: gainsboro;
-            --chapterAccent: peachpuff;
-            --fontColor: cornflowerblue; 
+            --fontColor: gray; */
             
             
-            --chapterColor: lightblue;
+            
+            /* --chapterColor: lightblue;
             --chapterAccent: blanchedalmond;
-            --fontColor: gray; 
+            --fontColor: gray;  */
 
-            --chapterColor: #1a4b9f; 
+            /* --chapterColor: #1a4b9f; 
             --chapterAccent: #2974cf;
-            --fontColor: #b4dde8;
+            --fontColor: #b4dde8; */
 
-            --chapterColor: #403424; 
+            /* --chapterColor: #403424; 
             --chapterAccent: #dea85d;
-            --fontColor: #b4dde8;
+            --fontColor: #b4dde8; */
             
             
-            */
+           
         
     }
 
@@ -113,11 +114,6 @@
     /* -------- */
 
 
-    html{
-        background-color: var(--chapterColor);
-    }
-
-
     body {
         padding: 0;
         margin: 0;
@@ -126,9 +122,6 @@
         font-size: 1.3rem;
         line-height: 1.6rem;
         font-weight: 300;
-
-        background-image: radial-gradient(var(--chapterAccent), var(--chapterColor) 70%);
-
 
         /* Past Stylings */
         /* background-image: linear-gradient(var(--chapterColor), var(--chapterAccent), var(--chapterColor)) */
@@ -205,7 +198,7 @@
     @media screen and (max-width: 1350px)  {
         #stretch{opacity: 1;}
 
-        .comment{
+        .comment, .footnote{
             opacity: 0;
             user-select: none;
             pointer-events: none; 
@@ -235,13 +228,17 @@
 
     /* h2{} */
 
+    p{
+        padding: 0;
+        margin: 0;
+    }
+
 
     /* Textbody */
 
     .text{
         width: 700px;
         padding: 0 3rem;
-        color: var(--fontColor);
 
         /* hyphens:auto; 
         hyphenate-limit-chars: 7 3 3; */
@@ -263,18 +260,41 @@
         width: var(--indent);
     }
 
+    code{
+        font-family:"ABC ROM Mono Variable", 'Courier New', Courier, monospace;
+        font-variant-ligatures: none;
+        font-size: 1.3rem;
+        letter-spacing: .05em;
+        line-height: 1.5rem;
+    }
+
+    .code-block{
+        display: block;
+    }
+
+    .code-block:nth-of-type(odd){padding: 1rem 0rem;}
+    .code-block:nth-of-type(even){padding-bottom: 1rem;}
 
 
+    ul{
+        /* list-style-position: inside;  */
+        padding-left:1rem;
+    }
+    li{
+        padding-bottom: .5rem;
+    }
 
+
+    blockquote{
+        padding-left: 4rem;
+        margin: 1rem 0;
+    }
 
 
     /* Links */
 
     .text a{
         font-family:"ABC ROM Extended Variable", Helvetica, Arial, sans-serif;
-
-        color: var(--fontColor);
-
         transition: var(--fontTransition);
     }
 
@@ -284,8 +304,6 @@
 
  
     .comment a{
-        color: var(--fontColor);
-
         transition: var(--fontTransition);
     }
 
@@ -295,7 +313,6 @@
 
 
     .footnote a{
-        color: var(--fontColor); 
         transition: var(--fontTransition);
     }
 
@@ -305,7 +322,7 @@
 
 
     .link-nav a{
-        color: var(--fontColor);
+        
         transition: var(--fontTransition);
 
         /* Past Stylings */
@@ -330,8 +347,12 @@
         font-style: oblique 16deg;
     }
 
-    /* .footnote em{ } */
-
+    .footnote em{
+        font-style: oblique 16deg;
+    }
+    .footnote em.not-source{
+        font-family:"ABC ROM Extended Variable", Helvetica, Arial, sans-serif;
+    }
 
 
 
@@ -357,12 +378,10 @@
         letter-spacing: .05em;
         line-height: 1.5rem;
 
-        color: var(--fontColor);
-
         transition: opacity 500ms ease;
     }
 
-    .comment span{
+    .comment p{
         padding: 1rem;
         width: inherit !important;
 
@@ -376,24 +395,21 @@
         /* box-shadow: inset 0px 0px 20px darkturquoise; */
     }
 
-    .comment span::before{
+    .comment p::before{
         content:"<!--";
        
         padding-inline-start: .5rem;
         padding-inline-end: .5rem;
         border-radius: 1rem;
 
-        color:var(--fontColor);
     }
 
-    .comment span::after{
+    .comment p::after{
         content:"-->";
 
         padding-inline-start: .5rem;
         padding-inline-end: .5rem;
         border-radius: 1rem;
-
-        color:var(--fontColor);
     }
 
     .comment-link{
@@ -402,34 +418,31 @@
         height: 1rem;
         width: 3rem;
         border-radius: 1rem;
-
-        cursor: none;
     }
 
-    .comment span, .comment-link {transition: --stop 750ms ease, width 750ms ease;}
+    .comment p, .comment-link {transition: --stop 750ms ease, width 750ms ease;}
 
 
 
 
 
-    .footnote{
-        display: flex;
-        flex-direction: column;
-        
-        margin: 0rem 3rem;
+    .footnote{   
+        /* display: flex;
+        flex-direction: column; */
+
         min-width: var(--margin);
         max-width: calc( var(--margin) + 10rem);
 
         font-size: .75em;
         line-height: 1.25em;
+        vertical-align: bottom;
 
     }
 
-    .footnote span{
-        padding: 1rem;
+    .footnote p{
+        padding-top: 1rem;
+         margin: 0rem 3rem;
         border-radius: 1rem;
-        
-        color: var(--fontColor);
     }
 
 
@@ -445,9 +458,6 @@
         border-radius: 1rem;
 
         font-size: .8rem;
-
-        background-color: var(--chapterColor);
-        border: 1px var(--fontColor) solid;
     }
 
 
@@ -536,17 +546,63 @@
 
     /* Chapter 2:  How did I end up here ?*/
 
-    .c9{}
+    .c9{
+        border: 1px dashed aqua;
+        background: radial-gradient(deeppink, transparent var(--stop)); 
+        --stop:60%; 
+    }
 
-    .c10{}
+    .c10{
+        border: 1px dashed orchid;
+        background: radial-gradient(lightgoldenrodyellow, transparent var(--stop)); 
+        --stop:60%; 
+    }
 
-    .c11{}
+    .c11{
+        border: 1px dashed palegoldenrod;
+        background: radial-gradient(deepskyblue, transparent var(--stop)); 
+        --stop:60%; 
+    }
 
     .c12{}
 
 
 
+    /* 04 Chapter Colors */
+    /* ----------------- */
+
+    .how-did-i-end-up-here {
+        background-color: var(--chapter1Color);
+        background-image: radial-gradient(var(--chapter1Accent), var(--chapter1Color) 70%);
+    }
+
+    .how-did-i-end-up-here * {
+        color: var(--font1Color);
+    }
+
+    .how-did-i-end-up-here .footnote-link{
+        background-color: var(--chapter1Color);
+        border: 1px var(--font2Color) solid;
+    }
 
 
 
 
+    .what-are-you-dear-comment {
+        background-color: var(--chapter2Color);
+        background-image: radial-gradient(var(--chapter2Accent), var(--chapter2Color) 120%);
+    }
+
+    .what-are-you-dear-comment .text{
+        background-image: linear-gradient(90deg, transparent, var(--chapter2Accent), transparent);
+        /* background-image: linear-gradient(90deg, var(--chapter2Accent), transparent, var(--chapter2Accent)); */
+    }
+
+    .what-are-you-dear-comment * {
+        color: var(--font2Color);
+    }
+
+    .what-are-you-dear-comment .footnote-link{
+        background-color: var(--chapter2Color);
+        border: 1px var(--font2Color) solid;
+    }

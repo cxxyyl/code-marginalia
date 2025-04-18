@@ -5,33 +5,15 @@
 
 <!-- 
 ToDo‘s
-- change marks to comments  ------------------------- 🐸
-- organize css after first chapter is done ---------- 🍄
-- appointment Konrad 17.4 – 11:00 ------------------- 🐸
--->
-
-<!-- 
-
-how will I deal with the bitmapped images? can i I color them?
--> svg maske
--> PNG image 
-
-
--->
+- change marks to comments  ------------------------------------------ 🐸
+- organize css after first chapter is done --------------------------- 🍄
+- appointment Konrad 17.4 – 11:00 ------------------------------------ 🐸
 
 
 
 
-
-
-
-
-<!--  -->
-
-
-<!-- 
 Ideas
-- test out three colums for margins ---------------------------------- 🐸 works!
+- test out three colums for margins ---------------------------------- 🐸 works! 
 - custom border + color for every comment + comment link ------------- 🌙 in progress 
 - animate borders? --------------------------------------------------- 🐸 yes, but i dont like how it looks 
 – gradients in borders? ---------------------------------------------- 🐸 no, not how i want them
@@ -45,13 +27,23 @@ Ideas
 - load in animations for all td.text ? ------------------------------- 🍄 need to think about that
 - hyphenation -------------------------------------------------------- 🍄
 
-- how will i deal with the bitmapped images?
+
 
 
 responsiveness
 - large screen make marginalia a bit wider on wider screens ---------- 🐸
 - center on large screens -------------------------------------------- 🐸
 - make middle td disappear, when on small screen --------------------- 🐸
+
+
+
+
+
+how will I deal with the bitmapped images? Can I color them?
+-> svg maske
+-> PNG image 
+
+
 
 
 -->
@@ -66,7 +58,7 @@ responsiveness
 
 
 
-<html lang="en">
+<html lang="en" class="how-did-i-end-up-here">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,10 +71,11 @@ responsiveness
     ⚘ I hope you fell well in the second tab. 
     -->
 
-    <link rel="stylesheet" href="makethispretty.css">
+    <link rel="stylesheet" href="css/make-it-pretty.css">
 </head>
 
-<body>
+<body class="how-did-i-end-up-here">
+    
     <aside class="stretch-messages">
         <div id="cramped">Sorry, but I feel cramped now.</div>
         <div id="stretch">Please stretch me!</div>
@@ -104,16 +97,15 @@ responsiveness
             </tr>
             <tr>
                 <td class="comment">
-                    <span class="c1">
-                        I’m thinking about which language to use to write this whole thing. My literature is mixed,
-                        and my notes are all over the place. I’m asking friends for opinions on this. I think my English is
-                        okay, but I could probably express myself better in German. But my gut is telling me, <em>Oh, it’s web/code
-                        related, so I guess English it is.</em> Let’s hold this thought; it will reappear later.
-                    </span>  
+                    <p class="c1">
+                    I’m thinking about which language to use to write this whole thing. My literature is mixed,
+                    and my notes are all over the place. I’m asking friends for opinions on this. I think my English is
+                    okay, but I could probably express myself better in German. But my gut is telling me, <em>Oh, it’s web/code
+                    related, so I guess English it is.</em> Let’s hold this thought; it will reappear later.
+                    </p>  
                 </td>
                 <td class="text">
-                    <span class="comment-link c1"></span>
-                    <span class="comment-link c2"></span>
+                    <p><span class="comment-link c1"></span><span class="comment-link c2"></span>
                     As always, it all comes back to childhood fears, but let’s start with the present. In a way, all
                     of this feels quite Freudian. With me joining Klasse Digitale Grafik, I honestly did not think I’d end up
                     coding. I originally joined because of my interest in graphic design and my general interest in topics
@@ -124,26 +116,27 @@ responsiveness
                     like a generic progression for a person learning a new skill, I became more interested in how other websites
                     were made. With this, my descent into the rabbit hole of web programming started to accelerate, and I think
                     I crossed a point of no return with coding.
+                    </p>
                 </td>
                 <td class="comment">
-                    <span class="c2" >
-                        I’ve been thinking a lot about the tone of this thesis. Thinking back to the last thesis I
-                        wrote, it had to have this scientific, neutral tone. In my previous thesis, I had to adopt a tone that
-                        was objective, devoid of personal emotions, and focused on presenting facts and analysis. With the HFBK
-                        and the freedom it offers to write my thesis, I’m pretty happy, as I want this to be more personal than
-                        I had the chance to do before.
-                    </span>   
+                    <p class="c2" >
+                    I’ve been thinking a lot about the tone of this thesis. Thinking back to the last thesis I
+                    wrote, it had to have this scientific, neutral tone. In my previous thesis, I had to adopt a tone that
+                    was objective, devoid of personal emotions, and focused on presenting facts and analysis. With the HFBK
+                    and the freedom it offers to write my thesis, I’m pretty happy, as I want this to be more personal than
+                    I had the chance to do before.
+                    </p>   
                 </td>
             </tr>
             <tr>
                 <td class="comment">
-                    <span class="c3">
-                        I’ve just talked to my dad about it—unlike me, he has a good memory. 
-                        He bought the Laptop on sale at a Real near Berlin in 2002.
-                    </span>
+                    <p class="c3">
+                    I’ve just talked to my dad about it—unlike me, he has a good memory. 
+                    He bought the Laptop on sale at a Real near Berlin in 2002.
+                    </p>
                 </td>
                 <td class="text">
-                    <span class="indent"></span>
+                    <p><span class="indent"></span>
                     One of my first <em>PC memories</em> is sitting in front of the family PC running Windows 98, doodling in
                     Paint. I don’t have any recollection of surfing the web at this age. This changed when I got my first Laptop
                     in 2002—I was 10 or 11 years old at that point. <span class="comment-link c3"></span> With this, I also got
@@ -151,7 +144,7 @@ responsiveness
                     LAN port of my Laptop. With a personal device and a connection to the Internet, I was well on my way to
                     becoming a very online teen. With the spread of social media and microblogging in the mid-2000s, I had a
                     cringy MySpace page and was later very active on Tumblr. Both sites allow you to customize your page or
-                    blog. <sup class="footnote-link">1</sup> I really enjoyed all the
+                    blog.&NoBreak;<sup class="footnote-link">1</sup> I really enjoyed all the
                     creativity people had with styling and personalizing their little web spaces, yet I never did that because I
                     was terrified of coding. With MySpace, I’m not so sure how I customized it anymore, but like Tumblr, it also
                     had a <a href="https://www.codecademy.com/resources/blog/myspace-and-the-coding-legacy/" target="_blank">code
@@ -162,35 +155,37 @@ responsiveness
                     thesis and thinking about my relation to code, many memories from my childhood and early teens came back. I
                     remembered why I used to be so afraid of coding—it was the <em>Informationstechnischer Grundkurs</em> I had
                     in 2005, which was seventh grade. <span class="comment-link c4"></span> 
+                    </p>
                 </td>
                 <td class="footnote">
-                    <span class="">
-                        1 Here is a really nice segment about the shift from personalized social media profiles like
-                        MySpace to a unified visual appearance. 
-                        <a class="external-link" href="https://share.transistor.fm/s/92d2f3fe" target="_blank">
-                        EP 23 Neverpost—Looks Great: The End of Personalization</a>
-                    </span>
+                    <p>
+                    1 Here is a really nice segment about the shift from personalized social media profiles like
+                    MySpace to a unified visual appearance. 
+                    <a class="external-link" href="https://share.transistor.fm/s/92d2f3fe" target="_blank">
+                    EP 23 Neverpost—Looks Great: The End of Personalization</a>
+                    </p>
                 </td>
             </tr>
             <tr>
                 <td class="comment">
-                    <span class="c4">
-                        These are moments where I’m glad I kept all my old school reports. It seems like I finished
-                        the course with a grade of 2 (B), which surprised me because I managed to partake in it and get a good
-                        grade. Moments like these remind me that my memories are nothing more than canonized fanfiction of
-                        myself. Out of interest, I looked at the state of the school’s website from when I was attending seventh
-                        grade. My old school seemed to go through at least three different domains and had multiple domains
-                        running in parallel. 
-                        <a href="https://web.archive.org/web/20050210103407/http://www.lilienthal-og.de/" target="_blank">2001—2010</a>, 
-                        <a href="https://web.archive.org/web/20100505023629/http://www.lili.cidsnet.de/" target="_blank">2007—2015</a>,
-                        <a href="https://web.archive.org/web/20250114122602/https://lilienthal-gymnasium-berlin.de/" target="_blank">2008—today</a> 
-                        
-                        It seems like <a href="https://web.archive.org/web/20050210103407/http://www.lilienthal-og.de/" target="_blank">this</a> 
-                        was the web design that was thought to me at that point.
-                    </span>
+                    <p class="c4">
+                    These are moments where I’m glad I kept all my old school reports. It seems like I finished
+                    the course with a grade of 2 (B), which surprised me because I managed to partake in it and get a good
+                    grade. Moments like these remind me that my memories are nothing more than canonized fanfiction of
+                    myself. Out of interest, I looked at the state of the school’s website from when I was attending seventh
+                    grade. My old school seemed to go through at least three different domains and had multiple domains
+                    running in parallel. 
+
+                    <a href="https://web.archive.org/web/20050210103407/http://www.lilienthal-og.de/" target="_blank">2001—2010</a>, 
+                    <a href="https://web.archive.org/web/20100505023629/http://www.lili.cidsnet.de/" target="_blank">2007—2015</a>,
+                    <a href="https://web.archive.org/web/20250114122602/https://lilienthal-gymnasium-berlin.de/" target="_blank">2008—today</a> 
+                    
+                    It seems like <a href="https://web.archive.org/web/20050210103407/http://www.lilienthal-og.de/" target="_blank">this</a> 
+                    was the web design that was thought to me at that point.
+                    </p>
                 </td>
                 <td class="text">
-                    <span class="indent"></span>
+                    <p><span class="indent"></span>
                     I remember being taught VBA Basic, HTML with CSS, and using CorelDraw to make graphics for the
                     website. The only other thing I remember is constantly feeling too stupid to program. “I’m not good enough
                     at maths or logical thinking to understand what happens when I type things into the computer.” I was so
@@ -216,17 +211,18 @@ responsiveness
                     inside and outside the coding field. Although I was socialized as a boy and was a somewhat geeky teen, which
                     was at least stereotypically a prerequisite for becoming part of the coding subculture, I never became a
                     part of it and developed in a different direction.
+                    </p>
                 </td>
                 <td class="footnote"></td>
             </tr>        
             <tr>
                 <td class="comment">
-                    <span class="c5">
+                    <p class="c5">
                         Sadly, I never discovered net art at that point in time, which probably would have changed a lot for me.
-                    </span>
+                    </p>
                 </td>
                 <td class="text">
-                    <span class="indent"></span>
+                    <p><span class="indent"></span>
                     Besides fear, the bad vibes I felt as a teen were another significant factor in why I never really
                     became part of the male-dominated geek culture. Later, I would learn the concepts to understand what these
                     bad vibes were—sexism, elitism, racism, anti-queerness, toxic masculinity, to name a few. I was mainly on
@@ -238,48 +234,53 @@ responsiveness
                     With the preconception that many people who could make websites or the Internet at large were part of a
                     group of people I was at odds with and my general fear of code, the idea of making the Internet was very far
                     away. Yet, I ended up coding and love making websites.
+                    </p>
                 </td>
                 <td class="footnote"></td>
             </tr>        
             <tr>
                 <td class="comment">
-                    <span class="c6"> I still feel stumbling around.</span>
+                    <p class="c6"> I still feel stumbling around.</p>
                 </td>    
                 <td class="text">
-                    <span class="indent"></span>
-                    With my coding skills improving over the last two years, <span class="comment-link c6"></span> I’m now at the point where I have somewhat of a praxis or at least ideas about what I am
+                    <p><span class="indent"></span>
+                    With my coding skills improving over the last two years, <span class="comment-link c6"></span> I’m now at the point 
+                    where I have somewhat of a praxis or at least ideas about what I am
                     doing with the medium website, how I am engaging with it, and what I want to do with it moving forward. For
                     me personally, this has had an impact on the way I program, albeit subconsciously until recently. While
                     searching for a topic for my thesis, I began realizing that many of the things I’m drawn to in coding are,
                     in a way, a reconciliation with past fears of my childhood self. <span class="comment-link c7"></span> <br>
-
+               
                     <span class="indent"></span>
                     I like websites with a certain warm feeling—a sort of personal character. This can apply to design
                     and content, as well as to code or how they were made. The aspect of how it’s made started to become more
                     pronounced the more I could code. With this, I also realized I wanted the code side of the website to have a
                     warm and inviting feeling, as this was something I had feared and distanced myself from for such a long
                     time.
+                    </p>
                 </td>
                 <td class="comment">
-                    <span class="c7"> 
-                        I am struggling with organizing the next block of ideas. There are many somewhat related
-                        things, but I’m wondering what to include. Now, two days later, I think I have worked out everything. I
-                        had to rethink the structure of the text, but now I think I’m quite okay with the structure. Thank you
-                        to all who supported me emotionally and in terms of content.
-                    </span>
+                    <p class="c7"> 
+                    I am struggling with organizing the next block of ideas. There are many somewhat related
+                    things, but I’m wondering what to include. Now, two days later, I think I have worked out everything. I
+                    had to rethink the structure of the text, but now I think I’m quite okay with the structure. Thank you
+                    to all who supported me emotionally and in terms of content.
+                    </p>
                 </td>
             </tr>
             <tr>
                 <td class="comment">
-                    <span class="c8">
-                        I really lovethe idea of the site spirit on 
-                        <a href="https://polinsski.digitale-grafik.com/" target="_blank">polinsski’s</a> current website. It
-                        reminds me of Tsukumogami in Japanese Folklore; they are tools that have acquired a soul after being
-                        used for 100 years and cause mischief if they haven’t been properly cared for. A sort of fictional
-                        anthropomorphization of the website or a form of world-building or storytelling that happens.
-                    </span>
+                    <p class="c8">
+                    I really lovethe idea of the site spirit on 
+                    <a href="https://polinsski.digitale-grafik.com/" target="_blank">polinsski’s</a> current website. It
+                    reminds me of Tsukumogami in Japanese Folklore; they are tools that have acquired a soul after being
+                    used for 100 years and cause mischief if they haven’t been properly cared for. A sort of fictional
+                    anthropomorphization of the website or a form of world-building or storytelling that happens.
+                    </p>
                 </td>
-                <td class="text">A feeling that peeking behind the curtain of design is welcome and encouraged. Like the website
+                <td class="text">
+                    <p>
+                    A feeling that peeking behind the curtain of design is welcome and encouraged. Like the website
                     that invites you in so you can spend some time with it. Or maybe like a connection to the person or people
                     who made the website by encountering artifacts they left behind—by chance or by purpose. <span class="comment-link c8"></span> <br>
 
@@ -292,7 +293,7 @@ responsiveness
                     itself. So, over the last few years, the comment grew very close to my heart, and in a way, I’m dedicating
                     this text to you, dear comment. To get to know you better, understand you more, learn about your history,
                     how you’re used, and what you mean to me. So I welcome you, dear reader, to go on this journey with me.
-                    <br><br>
+                    </p>
                 </td>
                 <td class="footnote"></td>
             </tr>
@@ -304,134 +305,16 @@ responsiveness
         </table>
     </main>
 
-<script>
-/*
-_______________________________________________________________________________________________________________________________
-        
-       ⭐️ Connected Hover ⭐️
-       ⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺
-        –  When "hovering" -> add effect to all elements that share the same class
 
 
-
-    Event Listeners
-    ⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺
-*/
-    // Trigger function if mouse enters or leaves the spacer element in the main text
-    document.querySelectorAll('.comment-link').forEach(element => {
-    element.addEventListener('mouseenter', handleHoverIn);
-    element.addEventListener('mouseleave', handleHoverOut);
-    });
-
-    // Trigger function if mouse enters or leaves the comment block in the marginalia
-    document.querySelectorAll('.comment > span').forEach(element => {
-    element.addEventListener('mouseenter', handleHoverIn);
-    element.addEventListener('mouseleave', handleHoverOut);
-    });
+<!-- 
+used to be js here
+-->
 
 
 
 
-/*
-    Functions
-    ⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺
-*/
-    function handleHoverIn(event) {
-    // Adds .comment-link to the linked elements
-    /* Uses classes (.c1 – .cNumber), this could also work with the data attribute, 
-       but I did not want to clutter the html code with additional data attributes. 
-       The classes I used are are already functioning as unique identifieres. 
-    */
-        // -event- refers to the interaction event that was detected by the eventListener
-        const target = event.currentTarget; // extract the HTML element from the event instance
-        let classList = Array.from(target.classList); // get the classes of the element and put them into an array
-
-        // Check if 'comment-link' exists and remove it, so it does not interfere with the .cNumber classes
-        if (classList.includes('comment-link')) {  // check if .comment-link is part of the array. If true ->
-            const searchClass = classList.indexOf('comment-link'); // use indexOf to find the exact location in the array, save it
-            classList.splice(searchClass, 1); // remove .comment-link by deleting it from it‘s position in the array. 1 -> delete 1 element
-        }
-
-        // add .connected-hover to every element in the array -> in this case all potentioal .cNumber classes wich is only 1
-        classList.forEach(classElement => { // loop through the array (in this case only once)
-            const sameClassElements = document.querySelectorAll(`.${classElement}`); // get all elements with the same .cNumber class
-            sameClassElements.forEach(element => element.classList.add('connected-hover')); // assign all elements the .connected-hover class
-        });     
-    }
-
-    function handleHoverOut(event) {
-    // delete .connected-hover classes from all elements once the mouse leaves the element
-        document.querySelectorAll('.connected-hover').forEach(element =>{ // select all elements with .connected-hover and loop through them
-            element.classList.remove('connected-hover') // delete .connected-hover from the element
-        });
-    }
-
-
-
-
-
-
-
-
-
-
-/*
-_______________________________________________________________________________________________________________________________
-*/    
-
-    // var allCssColors = ['aliceblue','antiquewhite','aqua','aquamarine','azure','beige','bisque','black','blanchedalmond','blue','blueviolet','brown','burlywood','cadetblue','chartreuse','chocolate','coral','cornflowerblue','cornsilk','crimson','cyan','darkblue','darkcyan','darkgoldenrod','darkgray','darkgreen','darkgrey','darkkhaki','darkmagenta','darkolivegreen','darkorange','darkorchid','darkred','darksalmon','darkseagreen','darkslateblue','darkslategray','darkslategrey','darkturquoise','darkviolet','deeppink','deepskyblue','dimgray','dimgrey','dodgerblue','firebrick','floralwhite','forestgreen','fuchsia','gainsboro','ghostwhite','gold','goldenrod','gray','green','greenyellow','grey','honeydew','hotpink','indianred','indigo','ivory','khaki','lavender','lavenderblush','lawngreen','lemonchiffon','lightblue','lightcoral','lightcyan','lightgoldenrodyellow','lightgray','lightgreen','lightgrey','lightpink','lightsalmon','lightseagreen','lightskyblue','lightslategray','lightslategrey','lightsteelblue','lightyellow','lime','limegreen','linen','magenta','maroon','mediumaquamarine','mediumblue','mediumorchid','mediumpurple','mediumseagreen','mediumslateblue','mediumspringgreen','mediumturquoise','oldlace','olive','olivedrab','orange','orangered','orchid','palegoldenrod','palegreen','paleturquoise','palevioletred','papayawhip','peachpuff','peru','pink','plum','powderblue','purple','red','rosybrown','royalblue','saddlebrown','salmon','sandybrown','seagreen','seashell','sienna','silver','skyblue','slateblue','slategray','slategrey','snow','springgreen','steelblue','tan','teal','thistle','tomato','turquoise','violet','wheat','white','whitesmoke','yellow','yellowgreen'];
-        
-    // var rngDark = Math.floor(Math.random(1)*allCssColors.length);
-    // var rngMid = Math.floor(Math.random(1)*allCssColors.length);
-    // var rngLight = Math.floor(Math.random(1)*allCssColors.length);
-
-    // var dark = allCssColors[rngDark];
-    // var mid = allCssColors[rngMid];
-    // var light = allCssColors[rngLight];
-
-    // document.documentElement.style.setProperty('--dark', dark);
-    // document.documentElement.style.setProperty('--mid', mid);
-    // document.documentElement.style.setProperty('--light', light);
-
-
-
-
-    // Change the font on selection
-
-    //     function permaSelection(selectionColor, fontColor) {
-    //     const selection = window.getSelection();
-    //     const selectedText = selection.toString();
-
-    //     if (selectedText !== "") {
-    //         const range = selection.getRangeAt(0);
-    //         const span = document.createElement("span");
-    //         span.style.backgroundColor = selectionColor;
-    //         span.style.color = fontColor;
-
-    //         range.surroundContents(span);
-    //         selection.removeAllRanges();
-    //         selection.addRange(range);
-    //     }
-    // }
-
-    // document.addEventListener("mouseup", function () {
-    //     const selectionColor = "var(--light)"; // Specify your desired font here
-    //     const fontColor = "var(--dark)"; 
-    //     permaSelection(selectionColor, fontColor);
-    // });
-
-
-
-
-
-
-
-
-
-
-
-
-</script> 
+<script src="js/make-it-run.js"></script>
 </body>
 </html>
 

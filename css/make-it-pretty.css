@@ -129,7 +129,9 @@
 
     main{
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        
     }
 
     table, tr{
@@ -237,7 +239,7 @@
     /* Textbody */
 
     .text{
-        width: 700px;
+
         padding: 0 3rem;
 
         /* hyphens:auto; 
@@ -313,11 +315,12 @@
 
 
     .footnote a{
+        line-break: anywhere;
         transition: var(--fontTransition);
     }
 
     .footnote a:hover{
-        font-weight: 500;
+        font-weight: 400;
     }
 
 
@@ -363,15 +366,17 @@
     /* 03 Syling for Margin Elements – Comments and Footnotes */
     /* ------------------------------------------------------ */
 
+    td{        
+        min-width: var(--margin) !important;
+        max-width: calc( var(--margin) + 10rem) !important;
+        margin: 0rem 2rem;
+    }
 
     .comment{
         display: flex;
         flex-direction: column;
 
-        margin: 0rem 3rem;
 
-        min-width: var(--margin) !important;
-        max-width: calc( var(--margin) + 10rem) !important;
 
         font-family:"ABC ROM Mono Variable", 'Courier New', Courier, monospace;
         font-variant-ligatures: none;
@@ -430,13 +435,15 @@
         /* display: flex;
         flex-direction: column; */
 
-        min-width: var(--margin);
-        max-width: calc( var(--margin) + 10rem);
 
         font-size: .75em;
         line-height: 1.25em;
         vertical-align: bottom;
 
+    }
+
+    .footnote-at-top{
+        vertical-align: top !important;
     }
 
     .footnote p{
@@ -544,7 +551,7 @@
     }
 
 
-    /* Chapter 2:  How did I end up here ?*/
+    /* Chapter 2:  What are you dear comment*/
 
     .c9{
         border: 1px dashed aqua;
@@ -563,6 +570,11 @@
         background: radial-gradient(deepskyblue, transparent var(--stop)); 
         --stop:60%; 
     }
+
+
+
+    /* Chapter 3: A look into the past */
+
 
     .c12{}
 

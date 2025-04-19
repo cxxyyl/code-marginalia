@@ -1,4 +1,15 @@
-    /* Make this ✿pretty✿ css */
+/* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
+
+
+   /* ⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄ */
+   /* Make this ✿pretty✿ css */
+   /* ⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃ */
+
+
+/* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
+
+
+
 
     /* Font Import */
     @font-face{
@@ -31,6 +42,7 @@
 
 
 
+/* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
 
 
 
@@ -59,6 +71,22 @@
         --chapter3Color: rosybrown;
         --chapter3Accent: orangered;
         --font3Color: seashell;
+
+        --chapter4Color: paleturquoise;
+        --chapter4Accent: lightgoldenrodyellow;
+        --font4Color: tomato;
+
+        /* Let‘s hope these are the final selections! */
+        /* I haven‘t worked with so many differen colors in a long time, so this process took me a while.
+           Also I wnted to do a named css color only website for a long time. I never really used them
+           that much before. After building a little script to go through all possible color combinations 
+           I realizied that there are some really nice pairings in the 9800 possible two-tones. 
+                
+        
+        */
+
+        
+        
      
         /* Alternative Color Schemes */
             
@@ -72,6 +100,7 @@
             --chapterAccent: oldlace;
             --fontColor: blue; */
         
+
             /* --chapterColor: blanchedalmond;
             --chapterAccent: floralwhite;
             --fontColor: black; */
@@ -85,27 +114,45 @@
             --chapterAccent: blanchedalmond;
             --fontColor: gray; */
             
-            
-            
+
             /* --chapterColor: lightblue;
             --chapterAccent: blanchedalmond;
             --fontColor: gray;  */
+
 
             /* --chapterColor: #1a4b9f; 
             --chapterAccent: #2974cf;
             --fontColor: #b4dde8; */
 
-            /* --chapterColor: #403424; 
-            --chapterAccent: #dea85d;
-            --fontColor: #b4dde8; */
             
-            
-           
-        
+            /* --chapterColor: darkgoldenrod;
+            --chapterAccent: silver;
+            --fontColor: dodgerblue ; */
+                    
+            /* --chapterColor: lightslategray;
+            --chapterAccent: sienna;
+            --fontColor: yellow; */
+    
+            /* --chapterColor: lightsteelblue;
+            --chapterAccent: sandybrown;
+            --fontColor: gold; */
+
     }
 
 
 
+
+
+
+
+/* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
+
+
+
+
+
+/* ✥ Dev-Toolz ✥ */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾ */
 
 
 /* * {
@@ -115,8 +162,10 @@
 
 
 
-    /* 01 Setup */
-    /* -------- */
+/* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
+
+    /* ✴︎✴︎ 01 Setup ✴︎✴︎ */
+    /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
 
 
     body {
@@ -159,6 +208,9 @@
         white-space: wrap;
     }
 
+    .okay-ill-to-this-just-this-one-time{
+        margin-top: 1rem !important;
+    }
 
     .align-at-bottom{
         align-content: flex-end;
@@ -218,8 +270,20 @@
 
 
 
-    /* 02 General Typography */
-    /* --------------------- */
+
+
+
+
+
+
+
+
+/* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
+
+
+    /* ✴︎✴︎ 02 General Typography ✴︎✴︎ */
+    /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
 
     h1{
         font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
@@ -255,6 +319,8 @@
         hyphenate-limit-chars: 10 4 4;
     }
 
+
+    
 
     /* Textbody */
 
@@ -309,6 +375,21 @@
         padding-left: 4rem;
         margin: 1rem 0;
     }
+
+     .statements{
+        padding-top: 2rem;
+        /* padding-left: 15rem; */
+        
+    } 
+    .statements p{
+  
+        padding-bottom: 1rem;
+        font-style: oblique 16deg;
+        /* text-align: right; */
+        width: 60%;
+        transform: translateX(66%);
+    } 
+
 
 
     /* Links */
@@ -379,19 +460,24 @@
 
 
 
+/* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
 
 
-    /* 03 Syling for Margin Elements – Comments and Footnotes */
-    /* ------------------------------------------------------ */
+    /* ✴︎✴︎ 03 Styling for Margin Elements – Comments and Footnotes ✴︎✴︎ */
+    /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+
 
     td{     
         align-content: flex-start;  
     }
 
+
+
     .comment{
         min-width: var(--margin) !important;
         max-width: calc( var(--margin) + 10rem) !important;
-        margin: 0rem 3rem;
+        margin: 0rem 3rem 1rem 3rem;
         padding: 1rem;
         
         font-family:"ABC ROM Mono Variable", 'Courier New', Courier, monospace;
@@ -407,16 +493,17 @@
         --stop:60%;
     }
 
-    .comment p{
-        /* this used to have a funtion, rip */
+     /* .comment p{ 
+        /* 🪦 this used to have a funtion – sleep tight sweet <p>rince 🥀 */
 
         /* Past Stylings */
         /* transition: border 750ms ease , background 750ms ease ;*/
         /* border: 1px dashed darkturquoise; */
         /* background-image: transparent !important; */
         /* background-image: radial-gradient(orangered,transparent, darkturquoise,transparent, transparent) !important; */
-        /* box-shadow: inset 0px 0px 20px darkturquoise; */
-    }
+        /* box-shadow: inset 0px 0px 20px darkturquoise;
+    } */
+   
 
     .comment p::before{
         content:"<!--";
@@ -444,8 +531,6 @@
     }
 
     .comment, .comment-link {transition: --stop 750ms ease, width 750ms ease;}
-
-
 
 
 
@@ -497,47 +582,58 @@
 
 
 
-    /* comment-link styles */
+
+
+
+    /*    Interactivity –– Hovers    */
+    /*  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾  */
 
     /* To enable the transition of gradients */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/@property */
     @property --stop {
         syntax: '<percentage>';
         inherits: false;
         initial-value: 60%;
         }
 
+        /* Now I kind of want to learn more about all the @rules */
+
 
     /* Hover with js for all elements with the same of the .cNumber class */
     .comment.connected-hover{
+        /* comment boxes */
         --stop: 150% !important;
 
     }
+
     span.connected-hover{
+        /* inline text elemets conneted to the boxes */
         --stop: 150% !important;
         width: 6rem;
     }
     
 
 
-    /* Custom styling for every comment-link */
 
-    /* Chapter 1:  How did I end up here ?*/
+    /*   Custom styling for every comment-link    */
+    /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾  */
+
+
+    /* Chapter 1: How did I end up here ?*/
     .c1 {
         border: 1px dashed orangered;
         background-image: radial-gradient(aliceblue, transparent var(--stop));
-
     }
 
     .c2{
         border: 1px dashed azure;
         background-image: radial-gradient(darksalmon, transparent var(--stop));
-   
     }
 
     .c3{
         border: 1px dashed floralwhite;
         background-image: radial-gradient(thistle, transparent var(--stop));
-        }
+    }
 
     .c4{
         border: 1px dashed mediumaquamarine;
@@ -566,7 +662,9 @@
     }
 
 
-    /* Chapter 2:  What are you dear comment*/
+
+
+    /* Chapter 2: What are you dear comment?*/
 
     .c9{
         border: 1px dashed aqua;
@@ -622,8 +720,39 @@
         border: 1px dashed lightsalmon; background: radial-gradient(grey,transparent var(--stop));
     }
 
-    /* 04 Chapter Colors */
-    /* ----------------- */
+    .c20{
+        border: 1px dashed firebrick; background: radial-gradient(lightskyblue,transparent var(--stop));
+    }
+
+    .c21{
+        border: 1px dashed seagreen; background: radial-gradient(teal,transparent var(--stop));
+    }
+
+    .c22{
+        border: 1px dashed chartreuse; background: radial-gradient(blueviolet,transparent var(--stop));
+    }
+    
+
+    /* Chapter 4: How do you fit into all of this, dear comment? */
+
+    .c23{
+        border: 1px dashed dodgerblue; background: radial-gradient(lightgreen,transparent var(--stop));
+    }
+
+
+
+
+
+
+
+/* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
+
+
+    /* ✴︎✴︎ 04 Chapter Colors ✴︎✴︎ */
+    /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+
+    /* Chapter 1 */
 
     .how-did-i-end-up-here {
         background-color: var(--chapter1Color);
@@ -641,17 +770,48 @@
 
 
 
-
+    /* Chapter 2 */
 
     .what-are-you-dear-comment {
         background-color: var(--chapter2Color);
         background-image: radial-gradient(var(--chapter2Accent), var(--chapter2Color) 120%);
     }
 
+    body.what-are-you-dear-comment main{
+        /* background-color: red !important; */
+        background-image: linear-gradient(var(--chapter2Color) , transparent 10%, transparent 90%, var(--chapter2Color));
+    }
+
     .what-are-you-dear-comment .text{
         background-image: linear-gradient(90deg, transparent, var(--chapter2Accent), transparent);
         /* background-image: linear-gradient(90deg, var(--chapter2Accent), transparent, var(--chapter2Accent)); */
     }
+
+    .gradient-mask-top::before{
+        display: block;
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 10rem;
+       
+        content: "";
+
+        background-image: linear-gradient(var(--chapter2Color) 40%, transparent) !important;
+    }
+
+    .gradient-mask-bottom::before{
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 10rem;
+       
+        content: "";
+
+        background-image: linear-gradient(transparent, var(--chapter2Color) 40%) !important;
+    }
+
 
     .what-are-you-dear-comment * {
         color: var(--font2Color);
@@ -665,35 +825,12 @@
 
 
 
-
+    /* Chapter 3 */
     
+
     .a-look-into-the-past{
         background-color: var(--chapter3Color);
       
-    }
-
-    .subchapter-one{
-        background-image: radial-gradient(gray, transparent 70%)
-    }
-
-    .subchapter-two{
-        background-image: radial-gradient(burlywood, transparent 70%)
-    }
-
-    .subchapter-three{
-        background-image: linear-gradient(transparent, orangered 70%, transparent )
-    }
-
-    .subchapter-three .text{
-        background-image: linear-gradient(90deg, transparent, var(--chapter3Color), transparent )
-    }
-
-
-
-
-
-    .subchapter-four{
-        background-image: radial-gradient(lightsalmon, transparent 70%)
     }
 
     .a-look-into-the-past * {
@@ -705,7 +842,72 @@
         border: 1px var(--font3Color) solid;
     }
 
+        /* Custom Gradients for every subchapter so this long-ass page is not to same-ish */
 
+    .subchapter-one{
+        background-image: radial-gradient(gray, transparent 70%)
+    }
+
+    .subchapter-two{
+        background-image: radial-gradient(burlywood, transparent 70%)
+    }
+
+    .subchapter-three{
+        background-image: linear-gradient(90deg, var(--chapter3Color), transparent 15%, transparent 85%, var(--chapter3Color)), linear-gradient(transparent, orangered 50%, transparent);
+        /* this was new to me, like the different multiple gradients in one. I like this a lot. */
+    }
+
+    .subchapter-three .text{
+        background-image: linear-gradient(90deg, transparent, var(--chapter3Color), transparent )
+    }
+
+
+    .subchapter-four{
+        background-image: radial-gradient(lightsalmon, transparent 70%)
+    }
+
+
+
+
+    /* Chapter 4 */
+
+    .how-do-you-fit {
+        background-color: var(--chapter4Color);
+        background-image: radial-gradient(var(--chapter4Color), var(--chapter4Accent), var(--chapter4Color)70%);
+    }
+
+    .how-do-you-fit * {
+        color: var(--font4Color);
+    }
+
+    .how-do-you-fit .text{
+        /* border-left: 1px  solid var(--font4Color); */
+        /* border-right: 1px solid var(--font4Color);  */
+        /* background-image: linear-gradient(90deg, transparent, var(--chapter4Color) 25%, var(--chapter4Color) 75%, transparent);  */
+        background-image: linear-gradient(90deg,transparent 10%, var(--chapter4Color) 50%, transparent 90%);
+    }
+
+    .how-do-you-fit .footnote-link{
+        background-color: var(--chapter4Color);
+        border: 1px var(--font4Color) solid;
+    }
+
+
+
+
+    /* .how-do-you-fit {
+        background-color: var(--chapterColor);
+        background-image: radial-gradient(var(--chapterAccent), var(--chapterColor) 70%);
+    }
+
+    .how-do-you-fit * {
+        color: var(--fontColor);
+    }
+
+    .how-do-you-fit .footnote-link{
+        background-color: var(--chapterColor);
+        border: 1px var(--fontColor) solid;
+    } */
 
 
 

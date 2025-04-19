@@ -17,7 +17,7 @@ ________________________________________________________________________________
         });
     
         // Trigger function if mouse enters or leaves the comment block in the marginalia
-        document.querySelectorAll('.comment > p').forEach(element => {
+        document.querySelectorAll('.comment').forEach(element => {
         element.addEventListener('mouseenter', handleHoverIn);
         element.addEventListener('mouseleave', handleHoverOut);
         });
@@ -39,10 +39,15 @@ ________________________________________________________________________________
             const target = event.currentTarget; // extract the HTML element from the event instance
             let classList = Array.from(target.classList); // get the classes of the element and put them into an array
     
-            // Check if 'comment-link' exists and remove it, so it does not interfere with the .cNumber classes
+            // Check if 'comment-link' or '.comment' exists and remove it, so it does not interfere with the .cNumber classes
             if (classList.includes('comment-link')) {  // check if .comment-link is part of the array. If true ->
                 const searchClass = classList.indexOf('comment-link'); // use indexOf to find the exact location in the array, save it
                 classList.splice(searchClass, 1); // remove .comment-link by deleting it from it‘s position in the array. 1 -> delete 1 element
+            }
+
+            if (classList.includes('comment')) {  // check if .comment is part of the array. If true ->
+                const searchClass = classList.indexOf('comment'); // use indexOf to find the exact location in the array, save it
+                classList.splice(searchClass, 1); // remove .comment by deleting it from it‘s position in the array. 1 -> delete 1 element
             }
     
             // add .connected-hover to every element in the array -> in this case all potentioal .cNumber classes wich is only 1

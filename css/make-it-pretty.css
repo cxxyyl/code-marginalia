@@ -56,7 +56,10 @@
         --chapter2Accent: darkkhaki;
         --font2Color: DarkOliveGreen;
 
-
+        --chapter3Color: rosybrown;
+        --chapter3Accent: orangered;
+        --font3Color: seashell;
+     
         /* Alternative Color Schemes */
             
 
@@ -105,7 +108,9 @@
 
 
 
-
+/* * {
+    border: 1px solid whitesmoke;
+} */
 
 
 
@@ -130,7 +135,9 @@
     main{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: nowrap;
         
     }
 
@@ -153,7 +160,9 @@
     }
 
 
-
+    .align-at-bottom{
+        align-content: flex-end;
+    }
 
 
 
@@ -218,7 +227,15 @@
         line-height: 1.5rem;
         font-weight: 400;
 
-        color: var(--fontColor);
+        animation: headlineAnimation 30s ease infinite ;
+    }
+
+    h2{
+        font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+        text-align: right;
 
         animation: headlineAnimation 30s ease infinite ;
     }
@@ -228,11 +245,14 @@
         50% {font-weight: 450;}
     }
 
-    /* h2{} */
+
 
     p{
         padding: 0;
         margin: 0;
+
+        hyphens:auto; 
+        hyphenate-limit-chars: 10 4 4;
     }
 
 
@@ -240,10 +260,8 @@
 
     .text{
 
+        width: 700px !important;
         padding: 0 3rem;
-
-        /* hyphens:auto; 
-        hyphenate-limit-chars: 7 3 3; */
 
         transition: opacity 500ms ease;
         
@@ -366,31 +384,28 @@
     /* 03 Syling for Margin Elements – Comments and Footnotes */
     /* ------------------------------------------------------ */
 
-    td{        
-        min-width: var(--margin) !important;
-        max-width: calc( var(--margin) + 10rem) !important;
-        margin: 0rem 2rem;
+    td{     
+        align-content: flex-start;  
     }
 
     .comment{
-        display: flex;
-        flex-direction: column;
-
-
-
+        min-width: var(--margin) !important;
+        max-width: calc( var(--margin) + 10rem) !important;
+        margin: 0rem 3rem;
+        padding: 1rem;
+        
         font-family:"ABC ROM Mono Variable", 'Courier New', Courier, monospace;
         font-variant-ligatures: none;
         letter-spacing: .05em;
         line-height: 1.5rem;
 
         transition: opacity 500ms ease;
+
+        border-radius: .3rem;   
     }
 
     .comment p{
-        padding: 1rem;
-        width: inherit !important;
-
-        border-radius: .3rem;
+        /* this used to have a funtion, rip */
 
         /* Past Stylings */
         /* transition: border 750ms ease , background 750ms ease ;*/
@@ -425,16 +440,16 @@
         border-radius: 1rem;
     }
 
-    .comment p, .comment-link {transition: --stop 750ms ease, width 750ms ease;}
+    .comment, .comment-link {transition: --stop 750ms ease, width 750ms ease;}
 
 
 
 
 
     .footnote{   
-        /* display: flex;
-        flex-direction: column; */
-
+        min-width: var(--margin) !important;
+        max-width: calc( var(--margin) + 10rem) !important;
+        margin: 0rem 3rem;
 
         font-size: .75em;
         line-height: 1.25em;
@@ -442,13 +457,10 @@
 
     }
 
-    .footnote-at-top{
-        vertical-align: top !important;
-    }
+
 
     .footnote p{
         padding-top: 1rem;
-         margin: 0rem 3rem;
         border-radius: 1rem;
     }
 
@@ -600,6 +612,7 @@
 
 
 
+
     .what-are-you-dear-comment {
         background-color: var(--chapter2Color);
         background-image: radial-gradient(var(--chapter2Accent), var(--chapter2Color) 120%);
@@ -618,3 +631,54 @@
         background-color: var(--chapter2Color);
         border: 1px var(--font2Color) solid;
     }
+
+
+
+
+
+    
+    .a-look-into-the-past{
+        background-color: var(--chapter3Color);
+      
+    }
+
+    .subchapter-one{
+        background-image: radial-gradient(gray, transparent 70%)
+    }
+
+    .subchapter-two{
+        background-image: radial-gradient(burlywood, transparent 70%)
+    }
+
+    .subchapter-three{
+        background-image: linear-gradient(transparent, orangered 70%, transparent )
+    }
+
+    .subchapter-three .text{
+        background-image: linear-gradient(90deg, transparent, var(--chapter3Color), transparent )
+    }
+
+
+
+
+
+    .subchapter-four{
+        background-image: radial-gradient(lightsalmon, transparent 70%)
+    }
+
+    .a-look-into-the-past * {
+        color: var(--font3Color);
+    }
+
+    .a-look-into-the-past .footnote-link{
+        background-color: var(--chapter3Color);
+        border: 1px var(--font3Color) solid;
+    }
+
+
+
+
+
+
+
+  

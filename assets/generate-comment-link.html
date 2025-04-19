@@ -7,7 +7,7 @@
 
     <style>
         body{
-        background-color: lightsalmon;
+        background-color: rosybrown;
 
         height: 100vh;
 
@@ -85,8 +85,8 @@
         
                     div.style.background =`radial-gradient(${gradientInside}, transparent)`;
                     div.style.borderColor = `${gradientOutside}`;
-                    figcaption.textContent = `background: radial-gradient(${gradientInside}, transparent 60%); border: 1px dashed ${gradientOutside}; `;  
-           
+                    figcaption.textContent = `border: 1px dashed ${gradientOutside}; background: radial-gradient(${gradientInside},transparent var(--stop));`;  
+              
 
                     // div.style.background=`radial-gradient(${gradientInside}, ${gradientOutside})`;
                     // figcaption.textContent = `background: radial-gradient(${gradientInside}, ${gradientOutside})`;  

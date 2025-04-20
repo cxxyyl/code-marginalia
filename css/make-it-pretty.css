@@ -14,24 +14,24 @@
     /* Font Import */
     @font-face{
         font-family: "ABC ROM Variable";
-        src: url("/assets/fonts/ABCROMVariable-Trial.woff") format("woff"), 
-                url("/assets/fonts/ABCROMVariable-Trial.woff2") format("woff2");
+        src: url("assets/fonts/ABCROMVariable-Trial.woff") format("woff"), 
+                url("assets/fonts/ABCROMVariable-Trial.woff2") format("woff2");
         font-weight: 300 900;
         /* Slant from 16 to 0  -> font-style: oblique xdeg*/
     }
 
     @font-face{
         font-family: "ABC ROM Mono Variable";
-        src: url("/assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff"), 
-                url("/assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff2");
+        src: url("assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff"), 
+                url("assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff2");
         font-weight: 300 900;
         /* Slant from 16 to 0  -> font-style: oblique xdeg*/
     }
 
     @font-face{
         font-family: "ABC ROM Extended Variable";
-        src: url("/assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff"), 
-                url("/assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff2");
+        src: url("assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff"), 
+                url("assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff2");
         font-weight: 300 900;
         /* Slant from 16 to 0  -> font-style: oblique xdeg*/
     }

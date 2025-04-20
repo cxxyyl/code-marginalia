@@ -512,14 +512,7 @@
     */
     
 
-
-
-
-
-
-
     figure{
-    
         padding: 0rem 1rem;
         margin: 0;
         
@@ -530,17 +523,14 @@
         font-size: .75em;
     }
 
-    /* custom html element */
+    /* custom html element ehehehe*/
     imagemask{
         display: block;
 
         padding: 0;
         margin: 0;
         
-
-        mask-repeat: no-repeat;
-
-        
+        mask-repeat: no-repeat; 
     }
 
 
@@ -550,7 +540,8 @@
         margin-left: -18rem;
         transform: translateX(18rem);
 
-        float: right;
+        /* my first time using float (๑˘︶˘๑) */
+        float: right; 
 
         imagemask{
             /* check how the mask image looks, and adjust */
@@ -559,12 +550,11 @@
             -webkit-mask-image: url('/assets/marginalia-in-a-book.svg');
             mask-image: url('/assets/marginalia-in-a-book.svg');
         }
-
     }
 
     .page-construction{
-        margin-right: -15rem;
-        transform: translateX(-15rem);
+        margin-right: -12rem;
+        transform: translateX(-12rem);
 
         float: left;
 
@@ -575,12 +565,104 @@
             -webkit-mask-image: url('/assets/page-contruction.svg');
             mask-image: url('/assets/page-contruction.svg');
         }
-
     }
 
+    .eniac-code{
+        margin-left: -8rem;
+        transform: translateX(8rem);
+        float: right;
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            width: 20rem;
+            height: 25rem;
+            -webkit-mask-image: url('/assets/eniac-code.svg');
+            mask-image: url('/assets/eniac-code.svg');
+        }
+    }
+    
+                                                                /* 
+                                                                Whyyyyyy?????? it worked and now it does not anymore
+                                                                Zoomed out and in again, now all the spacing is fucked. 
+                                                                */
 
 
+    .code-sheet{
+        transform: translateX(-15rem);
+        /* padding: 2rem; */
 
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            width: 29rem;
+            height: 17.5rem;
+            -webkit-mask-image: url('/assets/code-sheet.svg');
+            mask-image: url('/assets/code-sheet.svg');
+        }
+    }
+    .edsac-code{
+        margin-left: -12rem;
+        transform: translateX(12rem);
+
+        float: right;
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            width: 18rem;
+            height: 29rem;
+            -webkit-mask-image: url('/assets/edsac-code.svg');
+            mask-image: url('/assets/edsac-code.svg');
+        }
+    }
+    .paper-tape{
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            width: 31rem;
+            height: 10.4rem;
+            transform: scale(1.6) translateY(22%); /* additional scaling, so it does not break the table */
+            -webkit-mask-image: url('/assets/edsac-code-tape.svg');
+            mask-image: url('/assets/edsac-code-tape.svg');
+        }
+
+        figcaption{
+            transform: translateX(-1rem);
+        }
+    }
+
+    .punchcard{
+        padding-top: 1rem;
+        margin-left: -10rem;
+        transform: translateX(10rem);
+
+        float: right;
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            width: 28rem;
+            height: 13rem;
+
+            -webkit-mask-image: url('/assets/punchcard.svg');
+            mask-image: url('/assets/punchcard.svg');
+        }
+    }
+
+    .stack-of-punchcards{
+        padding-top: 2rem;
+        margin-left: -11rem;
+        transform: translateX(11rem);
+
+        float: right;
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            width: 29rem;
+            height: 16rem;
+
+            -webkit-mask-image: url('/assets/stack-of-punchcards.svg');
+            mask-image: url('/assets/stack-of-punchcards.svg');
+        }
+    }
 
 
 

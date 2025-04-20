@@ -14,24 +14,24 @@
     /* Font Import */
     @font-face{
         font-family: "ABC ROM Variable";
-        src: url("assets/fonts/ABCROMVariable-Trial.woff") format("woff"), 
-                url("assets/fonts/ABCROMVariable-Trial.woff2") format("woff2");
+        src: url("../assets/fonts/ABCROMVariable-Trial.woff") format("woff"), 
+                url("../assets/fonts/ABCROMVariable-Trial.woff2") format("woff2");
         font-weight: 300 900;
         /* Slant from 16 to 0  -> font-style: oblique xdeg*/
     }
 
     @font-face{
         font-family: "ABC ROM Mono Variable";
-        src: url("assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff"), 
-                url("assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff2");
+        src: url("../assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff"), 
+                url("../assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff2");
         font-weight: 300 900;
         /* Slant from 16 to 0  -> font-style: oblique xdeg*/
     }
 
     @font-face{
         font-family: "ABC ROM Extended Variable";
-        src: url("assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff"), 
-                url("assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff2");
+        src: url("../assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff"), 
+                url("../assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff2");
         font-weight: 300 900;
         /* Slant from 16 to 0  -> font-style: oblique xdeg*/
     }
@@ -155,9 +155,10 @@
 /* ‾‾‾‾‾‾‾‾‾‾‾‾‾ */
 
 
-/* * {
+/* Everything gets a border */
+* {
     border: 1px solid whitesmoke;
-} */
+}
 
 
 
@@ -458,12 +459,136 @@
 
 
 
+/* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
+
+
+    /* ✴︎✴︎ 03 Images ✴︎✴︎ */
+    /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+    /* 
+    Using the mix-blend-mode is a bit of a cop-out – 
+            until I found out another way to do it, which makes all
+            of this irrelevant... nice. Glad I was searching for
+            a solution again while writing this comment. 
+    I setteled on using mix-blend-mode, but I‘m really happy that I          ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤   
+    found out about mask-image. ٩(๑❛ᴗ❛๑)۶ So now ist just using the         ❤  https://www.w3schools.com/css/css3_masking.asp  ❤
+    svg/png alpha channel (transparency) ~ lovely!.                          ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ 
+    Before i tried converting the bitmap to paths and then svg, but 
+    the resolution of the dither was really bad. I also found 
+    this >> https://codepen.io/sosuke/pen/Pjoqqp << crazy tool, 
+    which applies any hex color as a css filter setup which
+    replicates the originl color. This is really creazy! But not
+    what I wanted in my case as I wanted the color be easily changed
+    with using the variables, not this filter setup. 
+        But now mask it is! This made everything so much easier!
+    With the mix-blend-mode I also encounterd a problem where a 
+    css transform on the parent messes with the mix-blend-mode of 
+    the child. This was so ????? From what I understood the transform
+    interferes with the calucations between parent and child element. 
+        Now everything is pretty nice ✿, the only thing that is 
+    kinda sad, is that I have to manually dial in the size of the size 
+    of <imagemask> to the mask-image. Kind of a pain, I whish it 
+    would be as convienient as using <img>.
+
+
+    This was the previous setup: 
+    ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+       figure{
+            width: 100%;
+            padding: 0rem 1rem;
+            margin: 0;
+            float: right / left;
+            margin-left: -10rem; 
+        }
+        img {
+            mix-blend-mode: overlay;
+            transform: translateX(10rem)
+        }
+        figcaption{
+            font-size: .75em;
+            transform: translateX(10rem)
+        }
+
+    */
+    
+
+
+
+
+
+
+
+    figure{
+    
+        padding: 0rem 1rem;
+        margin: 0;
+        
+    }
+
+
+    figcaption{
+        font-size: .75em;
+    }
+
+    /* custom html element */
+    imagemask{
+        display: block;
+
+        padding: 0;
+        margin: 0;
+        
+
+        mask-repeat: no-repeat;
+
+        
+    }
+
+
+    /* Setups for all used images */
+   
+    .marginalia-in-a-book{
+        margin-left: -18rem;
+        transform: translateX(18rem);
+
+        float: right;
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            height: 21rem;  
+            width: 33rem;
+            -webkit-mask-image: url('/assets/marginalia-in-a-book.svg');
+            mask-image: url('/assets/marginalia-in-a-book.svg');
+        }
+
+    }
+
+    .page-construction{
+        margin-right: -15rem;
+        transform: translateX(-15rem);
+
+        float: left;
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            width: 29rem;
+            height: 20.4rem;
+            -webkit-mask-image: url('/assets/page-contruction.svg');
+            mask-image: url('/assets/page-contruction.svg');
+        }
+
+    }
+
+
+
+
+
+
 
 
 /* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
 
 
-    /* ✴︎✴︎ 03 Styling for Margin Elements – Comments and Footnotes ✴︎✴︎ */
+    /* ✴︎✴︎ 04 Styling for Margin Elements – Comments and Footnotes ✴︎✴︎ */
     /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
 
 
@@ -510,7 +635,7 @@
        
         padding-inline-start: .5rem;
         padding-inline-end: .5rem;
-        border-radius: 1rem;
+        /* border-radius: 1rem; */
 
     }
 
@@ -519,7 +644,7 @@
 
         padding-inline-start: .5rem;
         padding-inline-end: .5rem;
-        border-radius: 1rem;
+        /* border-radius: 1rem; */
     }
 
     .comment-link{
@@ -549,7 +674,6 @@
 
     .footnote p{
         padding-top: 1rem;
-        border-radius: 1rem;
     }
 
 
@@ -748,7 +872,7 @@
 /* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
 
 
-    /* ✴︎✴︎ 04 Chapter Colors ✴︎✴︎ */
+    /* ✴︎✴︎ 05 Chapter Colors ✴︎✴︎ */
     /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
 
 
@@ -817,6 +941,10 @@
         color: var(--font2Color);
     }
 
+    .what-are-you-dear-comment imagemask{
+        background:var(--font2Color) ;
+    }
+
     .what-are-you-dear-comment .footnote-link{
         background-color: var(--chapter2Color);
         border: 1px var(--font2Color) solid;
@@ -835,6 +963,10 @@
 
     .a-look-into-the-past * {
         color: var(--font3Color);
+    }
+
+    .a-look-into-the-past imagemask{
+        background:var(--font3Color) ;
     }
 
     .a-look-into-the-past .footnote-link{

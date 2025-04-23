@@ -102,6 +102,7 @@ ________________________________________________________________________________
             document.documentElement.style.setProperty('--chapterColor', dark);
             document.documentElement.style.setProperty('--chapterAccent', mid);
             document.documentElement.style.setProperty('--fontColor', light);
+            console.log('works');
         }
 
 

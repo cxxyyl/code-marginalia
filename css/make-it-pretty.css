@@ -56,6 +56,7 @@
 
         /* Transitions */
         --fontTransition: font-weight 750ms ease;
+        --imagePop: margin 700ms ease, transform 700ms ease; 
 
         /* Colors */
 
@@ -536,9 +537,12 @@
 
     /* Setups for all used images */
    
+    /* Chapter 2 */
     .marginalia-in-a-book{
         margin-left: -18rem;
         transform: translateX(18rem);
+
+        transition: var(--imagePop);
 
         /* my first time using float (๑˘︶˘๑) */
         float: right; 
@@ -555,8 +559,11 @@
     .page-construction{
         margin-right: -12rem;
         transform: translateX(-12rem);
+        padding-top: 1rem;
 
         float: left;
+
+        transition: var(--imagePop);
 
         imagemask{
             /* check how the mask image looks, and adjust */
@@ -567,10 +574,26 @@
         }
     }
 
+    /* Fix issue with the overlapping comment */
+    /* Made the --imagePop transition here, and I really like it – will use it for every image */
+    @media  screen and (min-width:1750px ) and (max-width: 1950px) {
+        .page-construction{
+            margin-right: -7rem;
+            transform: translateX(-7rem);
+        }
+    }
+
+
+
+
+
+    /* Chapter 3 */
     .eniac-code{
         margin-left: -8rem;
         transform: translateX(8rem);
         float: right;
+
+        transition: var(--imagePop);
 
         imagemask{
             /* check how the mask image looks, and adjust */
@@ -584,25 +607,33 @@
                                                                 /* 
                                                                 Whyyyyyy?????? it worked and now it does not anymore
                                                                 Zoomed out and in again, now all the spacing is fucked. 
+
+                                                                ~ ~ ~ some days later
+                                                                Okay think i soled the problem 
                                                                 */
 
 
     .code-sheet{
+        padding-top: 1rem;
         transform: translateX(-15rem);
-        /* padding: 2rem; */
 
-
+        transition: var(--imagePop);
+        
         imagemask{
             /* check how the mask image looks, and adjust */
-            width: 29rem;
-            height: 17.5rem;
+            /* width: 29rem; */
+            /* min-height: 10rem;
+            max-height: 17.5rem; */
             -webkit-mask-image: url('/assets/code-sheet.svg');
             mask-image: url('/assets/code-sheet.svg');
         }
     }
+
     .edsac-code{
         margin-left: -12rem;
         transform: translateX(12rem);
+
+        transition: var(--imagePop);
 
         float: right;
 
@@ -615,10 +646,11 @@
         }
     }
     .paper-tape{
+        padding-top: 12rem;
 
         imagemask{
             /* check how the mask image looks, and adjust */
-            width: 31rem;
+            width: 38rem;
             height: 10.4rem;
             transform: scale(1.6) translateY(22%); /* additional scaling, so it does not break the table */
             -webkit-mask-image: url('/assets/edsac-code-tape.svg');
@@ -634,6 +666,8 @@
         padding-top: 1rem;
         margin-left: -10rem;
         transform: translateX(10rem);
+
+        transition: var(--imagePop);
 
         float: right;
 
@@ -652,6 +686,8 @@
         margin-left: -11rem;
         transform: translateX(11rem);
 
+        transition: var(--imagePop);
+
         float: right;
 
         imagemask{
@@ -665,6 +701,160 @@
     }
 
 
+
+
+      /* no more float, everything in one block */
+      @media screen and (max-width: 1650px)  {
+
+
+        /* Chapter 2 */
+        .marginalia-in-a-book{
+            margin-left: 0rem;
+            transform: translateX(0rem);
+            padding: 1rem 0rem;
+            float: none; 
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            imagemask{
+             width: 19rem;
+             height: 12rem;
+            }
+        }
+
+        .page-construction{
+            margin-right: 0rem;
+            transform: translateX(0rem);
+            padding: 1rem 0rem;
+            float: none;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            imagemask{
+             width: 19rem;
+             height: 12rem;
+            }
+        }
+
+
+        /* Chapter 3 */
+
+        .eniac-code{
+            margin-left: 0rem;
+            transform: translateX(0rem);
+            padding: 1rem 0rem;
+            float: none;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            imagemask{
+                /* check how the mask image looks, and adjust */
+                width: 15.7rem;
+                height: 20rem;
+            }
+
+        }
+
+        .code-sheet{
+            padding: 1rem 0rem;
+            transform: translateX(0rem);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            imagemask{
+                /* check how the mask image looks, and adjust */
+                width: 15.7rem;
+                height: 10rem;
+
+            }
+        }
+
+        .edsac-code{
+            margin-left: 0rem;
+            transform: translateX(0rem);
+            padding: 1rem 0rem;
+    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            float: none;
+    
+            imagemask{
+                /* check how the mask image looks, and adjust */
+                width: 15rem;
+                height: 24.5rem;
+
+            }
+        }
+
+        .paper-tape{
+            padding: 1rem 0rem;
+
+            float: none;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            imagemask{
+                /* check how the mask image looks, and adjust */
+                width: 17rem;
+                height: 5.6rem;
+                transform: scale(1) translateY(0);
+            }
+    
+            figcaption{
+                transform: translateX(0rem);
+            }
+        }
+
+        .punchcard{
+            padding: 1rem 0rem;
+            margin-left: 0rem;
+            transform: translateX(0rem);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            float: none;
+    
+            imagemask{
+                /* check how the mask image looks, and adjust */
+                width: 20rem;
+                height: 9rem;
+            }
+        }
+
+
+        .stack-of-punchcards{
+            padding: 1rem 0rem;
+            margin-left: 0rem;
+            transform: translateX(0rem);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            float: none;
+    
+            imagemask{
+                /* check how the mask image looks, and adjust */
+                width: 20rem;
+                height: 10.4rem;
+    
+            }
+        }
+    }
 
 
 /* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */

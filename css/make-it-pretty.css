@@ -6,6 +6,8 @@
    /* ⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃ */
 
 
+   /* This website was made to be viewed at a width of 1695px */
+
 /* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
 
 
@@ -244,12 +246,6 @@
         transition: opacity 500ms ease;
     }
 
-    /* #stretch{
-        text-align: right;
-    } */
-
-
-
     @media screen and (max-width: 1500px)  {
         .text{
            opacity: 0;
@@ -263,7 +259,7 @@
     @media screen and (max-width: 1350px)  {
         #stretch{opacity: 1;}
 
-        .comment, .footnote{
+        .comment, .footnote, .link-nav{
             opacity: 0;
             user-select: none;
             pointer-events: none; 
@@ -311,8 +307,6 @@
         50% {font-weight: 450;}
     }
 
-
-
     p{
         padding: 0;
         margin: 0;
@@ -321,8 +315,17 @@
         hyphenate-limit-chars: 10 4 4;
     }
 
+    .hyphenate-more{
+        hyphenate-limit-chars: 7 3 3 !important;
+    }
+
+    .hyphenate-less{
+        hyphenate-limit-chars: 12 4 4 !important;
+    }
+
 
     
+
 
     /* Textbody */
 
@@ -368,6 +371,7 @@
         /* list-style-position: inside;  */
         padding-left:1rem;
     }
+
     li{
         padding-bottom: .5rem;
     }
@@ -378,13 +382,12 @@
         margin: 1rem 0;
     }
 
-     .statements{
+    .statements{
         padding-top: 2rem;
         /* padding-left: 15rem; */
         
     } 
     .statements p{
-  
         padding-bottom: 1rem;
         font-style: oblique 16deg;
         /* text-align: right; */
@@ -587,10 +590,11 @@
 
 
 
+
     /* Chapter 3 */
     .eniac-code{
-        margin-left: -8rem;
-        transform: translateX(8rem);
+        margin-left: -5rem;
+        transform: translateX(5rem);
         float: right;
 
         transition: var(--imagePop);
@@ -609,29 +613,28 @@
                                                                 Zoomed out and in again, now all the spacing is fucked. 
 
                                                                 ~ ~ ~ some days later
-                                                                Okay think i soled the problem 
+                                                                Okay think I solved the problem. Making adjustments with
+                                                                @media 
                                                                 */
 
 
     .code-sheet{
-        padding-top: 1rem;
-        transform: translateX(-15rem);
-
+        padding: 1rem 0rem;
+        transform: translateX(-8rem);
+        width: 25rem;
         transition: var(--imagePop);
         
         imagemask{
             /* check how the mask image looks, and adjust */
-            /* width: 29rem; */
-            /* min-height: 10rem;
-            max-height: 17.5rem; */
+            height: 15rem;
             -webkit-mask-image: url('/assets/code-sheet.svg');
             mask-image: url('/assets/code-sheet.svg');
         }
     }
 
     .edsac-code{
-        margin-left: -12rem;
-        transform: translateX(12rem);
+        margin-left: -5rem;
+        transform: translateX(5rem);
 
         transition: var(--imagePop);
 
@@ -639,19 +642,22 @@
 
         imagemask{
             /* check how the mask image looks, and adjust */
-            width: 18rem;
-            height: 29rem;
+            width: 20rem;
+            height: 32rem;
             -webkit-mask-image: url('/assets/edsac-code.svg');
             mask-image: url('/assets/edsac-code.svg');
         }
     }
+
     .paper-tape{
-        padding-top: 12rem;
+        padding-top: 10rem;
+
+        transition: padding 700ms ease;
 
         imagemask{
             /* check how the mask image looks, and adjust */
-            width: 38rem;
-            height: 10.4rem;
+            width: 25rem;
+            height: 8.5rem;
             transform: scale(1.6) translateY(22%); /* additional scaling, so it does not break the table */
             -webkit-mask-image: url('/assets/edsac-code-tape.svg');
             mask-image: url('/assets/edsac-code-tape.svg');
@@ -662,14 +668,21 @@
         }
     }
 
+   /* Fix issue with edsac image collision*/
+    @media  screen and (min-width:1651px ) and (max-width: 1750px) {
+        .paper-tape{
+                padding-top: 1rem;
+
+                imagemask{
+                    width: 25rem;
+                    height: 8.5rem;
+            }
+        }
+    }
+
     .punchcard{
         padding-top: 1rem;
-        margin-left: -10rem;
-        transform: translateX(10rem);
-
-        transition: var(--imagePop);
-
-        float: right;
+        /* transition: var(--imagePop); */
 
         imagemask{
             /* check how the mask image looks, and adjust */
@@ -683,16 +696,11 @@
 
     .stack-of-punchcards{
         padding-top: 2rem;
-        margin-left: -11rem;
-        transform: translateX(11rem);
-
-        transition: var(--imagePop);
-
-        float: right;
+        /* transition: var(--imagePop); */
 
         imagemask{
             /* check how the mask image looks, and adjust */
-            width: 29rem;
+            width: 28rem;
             height: 16rem;
 
             -webkit-mask-image: url('/assets/stack-of-punchcards.svg');
@@ -700,8 +708,21 @@
         }
     }
 
+    .please-make-this-work{
+        margin-left: -14rem;
+        transform: translateX(14rem);
 
+        float: right;
 
+        transition: var(--imagePop);
+    }
+
+    @media  screen and (min-width:1820px){
+        .please-make-this-work{
+            margin-left: -5rem;
+            transform: translateX(5rem);
+        }
+    }
 
       /* no more float, everything in one block */
       @media screen and (max-width: 1650px)  {
@@ -764,6 +785,7 @@
         .code-sheet{
             padding: 1rem 0rem;
             transform: translateX(0rem);
+            width: auto;
 
             display: flex;
             flex-direction: column;
@@ -818,15 +840,15 @@
         }
 
         .punchcard{
-            padding: 1rem 0rem;
+            /* padding: 1rem 0rem;
             margin-left: 0rem;
-            transform: translateX(0rem);
+            transform: translateX(0rem); */
 
             display: flex;
             flex-direction: column;
             align-items: center;
     
-            float: none;
+            /* float: none; */
     
             imagemask{
                 /* check how the mask image looks, and adjust */
@@ -838,14 +860,14 @@
 
         .stack-of-punchcards{
             padding: 1rem 0rem;
-            margin-left: 0rem;
-            transform: translateX(0rem);
+            /* margin-left: 0rem;
+            transform: translateX(0rem); */
 
             display: flex;
             flex-direction: column;
             align-items: center;
-            
-            float: none;
+
+            /* float: none; */
     
             imagemask{
                 /* check how the mask image looks, and adjust */
@@ -853,6 +875,12 @@
                 height: 10.4rem;
     
             }
+        }
+        .please-make-this-work{
+            margin-left: 0rem;
+            transform: translateX(0rem);
+    
+            float: none;
         }
     }
 
@@ -955,6 +983,8 @@
         justify-content: center;
         align-items: center;
         vertical-align: middle;
+
+        user-select: none;
 
         width: 2rem;            
         height: 1rem;
@@ -1159,6 +1189,11 @@
         color: var(--font1Color);
     }
 
+    .how-did-i-end-up-here ::selection{
+        background: var(--font1Color);
+        color: var(--chapter1Color);
+    }
+
     .how-did-i-end-up-here .footnote-link{
         background-color: var(--chapter1Color);
         border: 1px var(--font2Color) solid;
@@ -1171,6 +1206,11 @@
     .what-are-you-dear-comment {
         background-color: var(--chapter2Color);
         background-image: radial-gradient(var(--chapter2Accent), var(--chapter2Color) 120%);
+    }
+
+    .what-are-you-dear-comment ::selection{
+        background: var(--font2Color);
+        color: var(--chapter2Color);
     }
 
     body.what-are-you-dear-comment main{
@@ -1237,6 +1277,11 @@
         color: var(--font3Color);
     }
 
+    .a-look-into-the-past ::selection{
+        background: var(--font3Color);
+        color: var(--chapter3Color);
+    }
+
     .a-look-into-the-past imagemask{
         background:var(--font3Color) ;
     }
@@ -1275,6 +1320,7 @@
 
     /* Chapter 4 */
 
+
     .how-do-you-fit {
         background-color: var(--chapter4Color);
         background-image: radial-gradient(var(--chapter4Color), var(--chapter4Accent), var(--chapter4Color)70%);
@@ -1283,6 +1329,13 @@
     .how-do-you-fit * {
         color: var(--font4Color);
     }
+
+
+    .how-do-you-fit ::selection{
+        background: var(--font4Color);
+        color: var(--chapter4Color);
+    }
+
 
     .how-do-you-fit .text{
         /* border-left: 1px  solid var(--font4Color); */

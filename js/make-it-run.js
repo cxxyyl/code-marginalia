@@ -81,37 +81,53 @@ ________________________________________________________________________________
 
        🍀 Feeling Lucky  🍀
        ⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺
-        –  When "hovering" -> add effect to all elements that share the same class
-
-
-
-
+       When activated, color generation switches to random
 */
 
+        if(document.querySelectorAll('#lucky')){
+            lucky(); 
+        };
+        
         function lucky(){
+      
+            // Array of all CSS colors
             var allCssColors = ['aliceblue','antiquewhite','aqua','aquamarine','azure','beige','bisque','black','blanchedalmond','blue','blueviolet','brown','burlywood','cadetblue','chartreuse','chocolate','coral','cornflowerblue','cornsilk','crimson','cyan','darkblue','darkcyan','darkgoldenrod','darkgray','darkgreen','darkgrey','darkkhaki','darkmagenta','darkolivegreen','darkorange','darkorchid','darkred','darksalmon','darkseagreen','darkslateblue','darkslategray','darkturquoise','darkviolet','deeppink','deepskyblue','dimgray','dimgrey','dodgerblue','firebrick','floralwhite','forestgreen','fuchsia','gainsboro','ghostwhite','gold','goldenrod','gray','green','greenyellow','grey','honeydew','hotpink','indianred','indigo','ivory','khaki','lavender','lavenderblush','lawngreen','lemonchiffon','lightblue','lightcoral','lightcyan','lightgoldenrodyellow','lightgray','lightgreen','lightgrey','lightpink','lightsalmon','lightseagreen','lightskyblue','lightslategray','lightslategrey','lightsteelblue','lightyellow','lime','limegreen','linen','magenta','maroon','mediumaquamarine','mediumblue','mediumorchid','mediumpurple','mediumseagreen','mediumslateblue','mediumspringgreen','mediumturquoise','oldlace','olive','olivedrab','orange','orangered','orchid','palegoldenrod','palegreen','paleturquoise','palevioletred','papayawhip','peachpuff','peru','pink','plum','powderblue','purple','red','rosybrown','royalblue','saddlebrown','salmon','sandybrown','seagreen','seashell','sienna','silver','skyblue','slateblue','slategray','slategrey','snow','springgreen','steelblue','tan','teal','thistle','tomato','turquoise','violet','wheat','white','whitesmoke','yellow','yellowgreen'];
             
-            var rngDark = Math.floor(Math.random(1)*allCssColors.length);
-            var rngMid = Math.floor(Math.random(1)*allCssColors.length);
-            var rngLight = Math.floor(Math.random(1)*allCssColors.length);
-        
-            var dark = allCssColors[rngDark];
-            var mid = allCssColors[rngMid];
-            var light = allCssColors[rngLight];
-        
-            document.documentElement.style.setProperty('--chapterColor', dark);
-            document.documentElement.style.setProperty('--chapterAccent', mid);
-            document.documentElement.style.setProperty('--fontColor', light);
-            console.log('works');
+            // 🎲 🎲 🎲 Random Number Generator for all color variables
+            var rngChapter = Math.floor(Math.random(1)*allCssColors.length);
+            var rngAccent = Math.floor(Math.random(1)*allCssColors.length);
+            var rngFont = Math.floor(Math.random(1)*allCssColors.length);
+            var rngLink = Math.floor(Math.random(1)*allCssColors.length);
+            var rngSub1 = Math.floor(Math.random(1)*allCssColors.length);
+            var rngSub2 = Math.floor(Math.random(1)*allCssColors.length);
+            var rngSub3 = Math.floor(Math.random(1)*allCssColors.length);
+            var rngSub4 = Math.floor(Math.random(1)*allCssColors.length);
+
+            // write to root
+            document.documentElement.style.setProperty('--chapterColor', allCssColors[rngChapter]);
+            document.documentElement.style.setProperty('--chapterAccent', allCssColors[rngAccent]);
+            document.documentElement.style.setProperty('--fontColor', allCssColors[rngFont]);
+            document.documentElement.style.setProperty('--linkColor', allCssColors[rngLink]);
+            document.documentElement.style.setProperty('--sub1', allCssColors[rngSub1]);
+            document.documentElement.style.setProperty('--sub2', allCssColors[rngSub2]);
+            document.documentElement.style.setProperty('--sub3', allCssColors[rngSub3]);
+            document.documentElement.style.setProperty('--sub4', allCssColors[rngSub4]);
+
+
+            // Write to #display-style
+            if(document.getElementById('display-style')){
+                   document.getElementById('chapter').textContent = `--chapterColor, ${allCssColors[rngChapter]};`;
+                   document.getElementById('accent').textContent = `--chapterAccent, ${allCssColors[rngAccent]};`;
+                   document.getElementById('font').textContent = `--fontColor, ${allCssColors[rngFont]};`;
+                   document.getElementById('link').textContent = `--linkColor, ${allCssColors[rngLink]};`;
+                   document.getElementById('sub1').textContent = `--sub1, ${allCssColors[rngSub1]};`;
+                   document.getElementById('sub2').textContent = `--sub2, ${allCssColors[rngSub2]};`;
+                   document.getElementById('sub3').textContent = `--sub3, ${allCssColors[rngSub3]};`;
+                   document.getElementById('sub4').textContent = `--sub4, ${allCssColors[rngSub4]};`;
+            }
         }
 
 
-    
-
-
-
-
-    
         // Change the font on selection
     
         //     function permaSelection(selectionColor, fontColor) {

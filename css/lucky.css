@@ -12,33 +12,27 @@
 ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
 
 
-
-
-
-
-
-
     /* Font Import */
     @font-face{
         font-family: "ABC ROM Variable";
-        src: url("/assets/fonts/ABCROMVariable-Trial.woff") format("woff"), 
-                url("/assets/fonts/ABCROMVariable-Trial.woff2") format("woff2");
+        src: url("../assets/fonts/ABCROMVariable-Trial.woff") format("woff"), 
+                url("../assets/fonts/ABCROMVariable-Trial.woff2") format("woff2");
         font-weight: 300 900;
         /* Slant from 16 to 0  -> font-style: oblique xdeg*/
     }
 
     @font-face{
         font-family: "ABC ROM Mono Variable";
-        src: url("/assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff"), 
-                url("/assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff2");
+        src: url("../assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff"), 
+                url("../assets/fonts/ABCROMMonoVariable-Trial.woff") format("woff2");
         font-weight: 300 900;
         /* Slant from 16 to 0  -> font-style: oblique xdeg*/
     }
 
     @font-face{
         font-family: "ABC ROM Extended Variable";
-        src: url("/assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff"), 
-                url("/assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff2");
+        src: url("../assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff"), 
+                url("../assets/fonts/ABCROMExtendedVariable-Trial.woff") format("woff2");
         font-weight: 300 900;
         /* Slant from 16 to 0  -> font-style: oblique xdeg*/
     }
@@ -63,10 +57,11 @@
 
         /* Transitions */
         --fontTransition: font-weight 750ms ease;
+        --imagePop: margin 700ms ease, transform 700ms ease; 
 
         /* Colors */
 
-        
+        /* With Lucky CSS all colors are picked randomly out of all named css colors */
     }
 
 
@@ -85,9 +80,1258 @@
 /* ‾‾‾‾‾‾‾‾‾‾‾‾‾ */
 
 
-/* * {
+/* Everything gets a border */
+main * {
     border: 1px solid whitesmoke;
-} */
+}
+
+nav {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+
+    z-index: 99;
+
+    a{
+        padding: 0 .5rem;
+        border-radius: 2rem;
+        border: 1px solid white;
+        background-color: rgba(129, 129, 129, 0.328);
+        color:white !important; 
+        text-decoration: none;
+        width: min-content;
+
+        cursor: pointer;
+    }
+
+    #display-style{
+        padding: 1rem;
+        border-radius: .5rem;
+        border: 1px solid white;
+        background-color: rgba(129, 129, 129, 0.328);
+        backdrop-filter: blur(10px);
+        
+        *{
+            color:white !important; 
+        }
+    }
+}
 
 
 
+
+/* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
+
+    /* ✴︎✴︎ 01 Setup ✴︎✴︎ */
+    /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+
+    body {
+        padding: 0;
+        margin: 0;
+
+        font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        font-weight: 300;
+
+        /* Past Stylings */
+        /* background-image: linear-gradient(var(--chapterColor), var(--chapterAccent), var(--chapterColor)) */
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        
+    }
+
+    table, tr{
+        padding: 0;
+        margin: 0;
+        
+        /* Delete space between rows and columns */
+        border-spacing: 0;
+        border-collapse: collapse;   
+    }
+
+
+    /* Layout helpers */
+
+    /* Space from Top and Bottom of the page */
+    .spacer-table{
+        padding: 5rem 0rem !important;
+        white-space: wrap;
+    }
+
+    .okay-ill-to-this-just-this-one-time{
+        margin-top: 1rem !important;
+    }
+
+    .align-at-bottom{
+        align-content: flex-end;
+    }
+
+
+
+    /* Cramped State */
+
+    .stretch-messages{
+        position: fixed;
+        top: calc(50vh + 5px);
+        left: 50vw;
+        transform: translate( -50%,  -50%);
+
+        font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+
+        user-select: none;
+        pointer-events: none;
+
+        color: var(--fontColor);
+    }
+ 
+    #cramped,  #stretch{
+        opacity: 0;
+        transition: opacity 500ms ease;
+    }
+
+    @media screen and (max-width: 1500px)  {
+        .text{
+           opacity: 0;
+           user-select: none;
+           pointer-events: none;   
+        } 
+
+        #cramped{opacity: 1;}
+    }
+
+    @media screen and (max-width: 1350px)  {
+        #stretch{opacity: 1;}
+
+        .comment, .footnote, .link-nav{
+            opacity: 0;
+            user-select: none;
+            pointer-events: none; 
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+/* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
+
+
+    /* ✴︎✴︎ 02 General Typography ✴︎✴︎ */
+    /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+
+    h1{
+        font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+
+        animation: headlineAnimation 30s ease infinite ;
+    }
+
+    h2{
+        font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+        text-align: right;
+
+        animation: headlineAnimation 30s ease infinite ;
+    }
+
+    @keyframes headlineAnimation {
+        0%, 100%{font-weight: 400;}
+        50% {font-weight: 450;}
+    }
+
+    p{
+        padding: 0;
+        margin: 0;
+
+        hyphens:auto; 
+        hyphenate-limit-chars: 10 4 4;
+    }
+
+    .hyphenate-more{
+        hyphenate-limit-chars: 7 3 3 !important;
+    }
+
+    .hyphenate-less{
+        hyphenate-limit-chars: 12 4 4 !important;
+    }
+
+
+    
+
+
+    /* Textbody */
+
+    .text{
+
+        width: 700px !important;
+        padding: 0 3rem;
+
+        transition: opacity 500ms ease;
+        
+        /* Past Stylings */
+        /* border-left: 1px solid var(--chapterAccent); */
+        /* border-right: 1px solid var(--chapterAccent); */
+        /* background-image: linear-gradient(90deg, transparent, var(--chapterAccent), transparent); */
+        /* background-image: linear-gradient(90deg, var(--chapterAccent), transparent, var(--chapterAccent)); */
+    }
+
+
+    .indent {
+        /* spacing for text indent after a paragraph */
+        content: "";
+        display: inline-block;
+        width: var(--indent);
+    }
+
+    code{
+        font-family:"ABC ROM Mono Variable", 'Courier New', Courier, monospace;
+        font-variant-ligatures: none;
+        font-size: 1.3rem;
+        letter-spacing: .05em;
+        line-height: 1.5rem;
+    }
+
+    .code-block{
+        display: block;
+    }
+
+    .code-block:nth-of-type(odd){padding: 1rem 0rem;}
+    .code-block:nth-of-type(even){padding-bottom: 1rem;}
+
+
+    ul{
+        /* list-style-position: inside;  */
+        padding-left:1rem;
+    }
+
+    li{
+        padding-bottom: .5rem;
+    }
+
+
+    blockquote{
+        padding-left: 4rem;
+        margin: 1rem 0;
+    }
+
+    .statements{
+        padding-top: 2rem;
+        /* padding-left: 15rem; */
+        
+    } 
+    .statements p{
+        padding-bottom: 1rem;
+        font-style: oblique 16deg;
+        /* text-align: right; */
+        width: 60%;
+        transform: translateX(66%);
+    } 
+
+
+
+    /* Links */
+
+    .text a{
+        font-family:"ABC ROM Extended Variable", Helvetica, Arial, sans-serif;
+        transition: var(--fontTransition);
+    }
+
+    .text a:hover{
+        font-weight: 600;
+    }
+
+ 
+    .comment a{
+        transition: var(--fontTransition);
+    }
+
+    .comment a:hover{
+        font-weight: 800;
+    }
+
+
+    .footnote a{
+        line-break: anywhere;
+        transition: var(--fontTransition);
+    }
+
+    .footnote a:hover{
+        font-weight: 400;
+    }
+
+
+    .link-nav a{
+        
+        transition: var(--fontTransition);
+
+        /* Past Stylings */
+        /* font-family:"ABC ROM Extended Variable", Helvetica, Arial, sans-serif; */
+        /* text-decoration: none; s*/
+    }
+
+    .link-nav a:hover{
+        font-weight: 500;
+    }
+
+
+
+    /* Italic */
+
+    .text em{
+        font-family:"ABC ROM Extended Variable", Helvetica, Arial, sans-serif;
+        font-style: oblique 16deg;
+    }
+
+    .comment em{
+        font-style: oblique 16deg;
+    }
+
+    .footnote em{
+        font-style: oblique 16deg;
+    }
+    .footnote em.not-source{
+        font-family:"ABC ROM Extended Variable", Helvetica, Arial, sans-serif;
+    }
+
+
+
+/* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
+
+
+    /* ✴︎✴︎ 03 Images ✴︎✴︎ */
+    /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+    /* 
+    Using the mix-blend-mode is a bit of a cop-out – 
+            until I found out another way to do it, which makes all
+            of this irrelevant... nice. Glad I was searching for
+            a solution again while writing this comment. 
+    I setteled on using mix-blend-mode, but I‘m really happy that I          ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤   
+    found out about mask-image. ٩(๑❛ᴗ❛๑)۶ So now ist just using the         ❤  https://www.w3schools.com/css/css3_masking.asp  ❤
+    svg/png alpha channel (transparency) ~ lovely!.                          ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ 
+    Before i tried converting the bitmap to paths and then svg, but 
+    the resolution of the dither was really bad. I also found 
+    this >> https://codepen.io/sosuke/pen/Pjoqqp << crazy tool, 
+    which applies any hex color as a css filter setup which
+    replicates the originl color. This is really creazy! But not
+    what I wanted in my case as I wanted the color be easily changed
+    with using the variables, not this filter setup. 
+        But now mask it is! This made everything so much easier!
+    With the mix-blend-mode I also encounterd a problem where a 
+    css transform on the parent messes with the mix-blend-mode of 
+    the child. This was so ????? From what I understood the transform
+    interferes with the calucations between parent and child element. 
+        Now everything is pretty nice ✿, the only thing that is 
+    kinda sad, is that I have to manually dial in the size of the size 
+    of <imagemask> to the mask-image. Kind of a pain, I whish it 
+    would be as convienient as using <img>.
+
+
+    This was the previous setup: 
+    ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+       figure{
+            width: 100%;
+            padding: 0rem 1rem;
+            margin: 0;
+            float: right / left;
+            margin-left: -10rem; 
+        }
+        img {
+            mix-blend-mode: overlay;
+            transform: translateX(10rem)
+        }
+        figcaption{
+            font-size: .75em;
+            transform: translateX(10rem)
+        }
+
+
+    Today Christoph told me that there was an era of webdesign,
+    where float was used to build fulllayouts for a website 
+    – like a precursor to display:flex. I want to know more
+    about this. But working with float for everything sure
+    sounds like it was a pain? From my first experiences with
+    it, it seems really finicky to make consistent layouts
+    with it. 
+
+
+    */
+    
+
+    figure{
+        padding: 0rem 1rem;
+        margin: 0;
+        
+    }
+
+
+    figcaption{
+        font-size: .75em;
+    }
+
+    /* custom html element ehehehe*/
+    imagemask{
+        display: block;
+
+        padding: 0;
+        margin: 0;
+        
+        mask-repeat: no-repeat; 
+    }
+
+
+    /* Setups for all used images */
+   
+    /* Chapter 2 */
+    .marginalia-in-a-book{
+        margin-left: -18rem;
+        transform: translateX(18rem);
+
+        transition: var(--imagePop);
+
+        /* my first time using float (๑˘︶˘๑) */
+        float: right; 
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            height: 21rem;  
+            width: 33rem;
+            -webkit-mask-image: url('/assets/marginalia-in-a-book.svg');
+            mask-image: url('/assets/marginalia-in-a-book.svg');
+        }
+    }
+
+    .page-construction{
+        margin-right: -12rem;
+        transform: translateX(-12rem);
+        padding-top: 1rem;
+
+        float: left;
+
+        transition: var(--imagePop);
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            width: 29rem;
+            height: 20.4rem;
+            -webkit-mask-image: url('/assets/page-contruction.svg');
+            mask-image: url('/assets/page-contruction.svg');
+        }
+    }
+
+    /* Fix issue with the overlapping comment */
+    /* Made the --imagePop transition here, and I really like it – will use it for every image */
+    @media  screen and (min-width:1750px ) and (max-width: 1950px) {
+        .page-construction{
+            margin-right: -7rem;
+            transform: translateX(-7rem);
+        }
+    }
+
+
+
+
+
+
+    /* Chapter 3 */
+    .eniac-code{
+        margin-left: -5rem;
+        transform: translateX(5rem);
+        float: right;
+
+        transition: var(--imagePop);
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            width: 20rem;
+            height: 25rem;
+            -webkit-mask-image: url('/assets/eniac-code.svg');
+            mask-image: url('/assets/eniac-code.svg');
+        }
+    }
+    
+                                                                /* 
+                                                                Whyyyyyy?????? it worked and now it does not anymore
+                                                                Zoomed out and in again, now all the spacing is fucked. 
+
+                                                                ~ ~ ~ some days later
+                                                                Okay think I solved the problem. Making adjustments with
+                                                                @media 
+                                                                */
+
+
+    .code-sheet{
+        padding: 1rem 0rem;
+        transform: translateX(-8rem);
+        width: 25rem;
+        transition: var(--imagePop);
+        
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            height: 15rem;
+            -webkit-mask-image: url('/assets/code-sheet.svg');
+            mask-image: url('/assets/code-sheet.svg');
+        }
+    }
+
+    .edsac-code{
+        margin-left: -5rem;
+        transform: translateX(5rem);
+
+        transition: var(--imagePop);
+
+        float: right;
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            width: 20rem;
+            height: 32rem;
+            -webkit-mask-image: url('/assets/edsac-code.svg');
+            mask-image: url('/assets/edsac-code.svg');
+        }
+    }
+
+    .paper-tape{
+        padding-top: 10rem;
+
+        transition: padding 700ms ease;
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            width: 25rem;
+            height: 8.5rem;
+            transform: scale(1.6) translateY(22%); /* additional scaling, so it does not break the table */
+            -webkit-mask-image: url('/assets/edsac-code-tape.svg');
+            mask-image: url('/assets/edsac-code-tape.svg');
+        }
+
+        figcaption{
+            transform: translateX(-1rem);
+        }
+    }
+
+   /* Fix issue with edsac image collision*/
+    @media  screen and (min-width:1651px ) and (max-width: 1750px) {
+        .paper-tape{
+                padding-top: 1rem;
+
+                imagemask{
+                    width: 25rem;
+                    height: 8.5rem;
+            }
+        }
+    }
+
+    .punchcard{
+        padding-top: 1rem;
+        /* transition: var(--imagePop); */
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            width: 28rem;
+            height: 13rem;
+
+            -webkit-mask-image: url('/assets/punchcard.svg');
+            mask-image: url('/assets/punchcard.svg');
+        }
+    }
+
+    .stack-of-punchcards{
+        padding-top: 2rem;
+        /* transition: var(--imagePop); */
+
+        imagemask{
+            /* check how the mask image looks, and adjust */
+            width: 28rem;
+            height: 16rem;
+
+            -webkit-mask-image: url('/assets/stack-of-punchcards.svg');
+            mask-image: url('/assets/stack-of-punchcards.svg');
+        }
+    }
+
+    .please-make-this-work{
+        margin-left: -14rem;
+        transform: translateX(14rem);
+
+        float: right;
+
+        transition: var(--imagePop);
+    }
+
+    @media  screen and (min-width:1820px){
+        .please-make-this-work{
+            margin-left: -5rem;
+            transform: translateX(5rem);
+        }
+    }
+
+      /* no more float, everything in one block */
+      @media screen and (max-width: 1650px)  {
+
+
+        /* Chapter 2 */
+        .marginalia-in-a-book{
+            margin-left: 0rem;
+            transform: translateX(0rem);
+            padding: 1rem 0rem;
+            float: none; 
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            imagemask{
+             width: 19rem;
+             height: 12rem;
+            }
+        }
+
+        .page-construction{
+            margin-right: 0rem;
+            transform: translateX(0rem);
+            padding: 1rem 0rem;
+            float: none;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            imagemask{
+             width: 19rem;
+             height: 12rem;
+            }
+        }
+
+
+        /* Chapter 3 */
+
+        .eniac-code{
+            margin-left: 0rem;
+            transform: translateX(0rem);
+            padding: 1rem 0rem;
+            float: none;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            imagemask{
+                /* check how the mask image looks, and adjust */
+                width: 15.7rem;
+                height: 20rem;
+            }
+
+        }
+
+        .code-sheet{
+            padding: 1rem 0rem;
+            transform: translateX(0rem);
+            width: auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            imagemask{
+                /* check how the mask image looks, and adjust */
+                width: 15.7rem;
+                height: 10rem;
+
+            }
+        }
+
+        .edsac-code{
+            margin-left: 0rem;
+            transform: translateX(0rem);
+            padding: 1rem 0rem;
+    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            float: none;
+    
+            imagemask{
+                /* check how the mask image looks, and adjust */
+                width: 15rem;
+                height: 24.5rem;
+
+            }
+        }
+
+        .paper-tape{
+            padding: 1rem 0rem;
+
+            float: none;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            imagemask{
+                /* check how the mask image looks, and adjust */
+                width: 17rem;
+                height: 5.6rem;
+                transform: scale(1) translateY(0);
+            }
+    
+            figcaption{
+                transform: translateX(0rem);
+            }
+        }
+
+        .punchcard{
+            /* padding: 1rem 0rem;
+            margin-left: 0rem;
+            transform: translateX(0rem); */
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            /* float: none; */
+    
+            imagemask{
+                /* check how the mask image looks, and adjust */
+                width: 20rem;
+                height: 9rem;
+            }
+        }
+
+
+        .stack-of-punchcards{
+            padding: 1rem 0rem;
+            /* margin-left: 0rem;
+            transform: translateX(0rem); */
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            /* float: none; */
+    
+            imagemask{
+                /* check how the mask image looks, and adjust */
+                width: 20rem;
+                height: 10.4rem;
+    
+            }
+        }
+        .please-make-this-work{
+            margin-left: 0rem;
+            transform: translateX(0rem);
+    
+            float: none;
+        }
+    }
+
+
+/* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
+
+
+    /* ✴︎✴︎ 04 Styling for Margin Elements – Comments and Footnotes ✴︎✴︎ */
+    /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+
+
+    td{     
+        align-content: flex-start;  
+    }
+
+
+
+    .comment{
+        min-width: var(--margin) !important;
+        max-width: calc( var(--margin) + 10rem) !important;
+        margin: 0rem 3rem 1rem 3rem;
+        padding: 1rem;
+        
+        font-family:"ABC ROM Mono Variable", 'Courier New', Courier, monospace;
+        font-variant-ligatures: none;
+        letter-spacing: .05em;
+        line-height: 1.5rem;
+
+        transition: opacity 500ms ease;
+
+        border-radius: .3rem;   
+
+        /* for gradient transition */
+        --stop:60%;
+    }
+
+     /* .comment p{ 
+        /* 🪦 this used to have a funtion – sleep tight sweet <p>rince 🥀 */
+
+        /* Past Stylings */
+        /* transition: border 750ms ease , background 750ms ease ;*/
+        /* border: 1px dashed darkturquoise; */
+        /* background-image: transparent !important; */
+        /* background-image: radial-gradient(orangered,transparent, darkturquoise,transparent, transparent) !important; */
+        /* box-shadow: inset 0px 0px 20px darkturquoise;
+    } */
+   
+
+    .comment p::before{
+        content:"<!--";
+       
+        padding-inline-start: .5rem;
+        padding-inline-end: .5rem;
+        /* border-radius: 1rem; */
+
+    }
+
+    .comment p::after{
+        content:"-->";
+
+        padding-inline-start: .5rem;
+        padding-inline-end: .5rem;
+        /* border-radius: 1rem; */
+    }
+
+    .comment-link{
+        display: inline-block;
+
+        height: 1rem;
+        width: 3rem;
+        border-radius: 1rem;
+    }
+
+    .comment, .comment-link {transition: --stop 750ms ease, width 750ms ease;}
+
+
+
+    .footnote{   
+        min-width: var(--margin) !important;
+        max-width: calc( var(--margin) + 10rem) !important;
+        margin: 0rem 3rem;
+
+        font-size: .75em;
+        line-height: 1.25em;
+        vertical-align: bottom;
+
+    }
+
+
+
+    .footnote p{
+        padding-top: 1rem;
+    }
+
+
+
+    .footnote-link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+
+        user-select: none;
+
+        width: 2rem;            
+        height: 1rem;
+        border-radius: 1rem;
+
+        font-size: .8rem;
+    }
+
+
+
+
+
+    .link-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding-top: 3rem;
+    }
+
+
+
+
+
+
+
+    /*    Interactivity –– Hovers    */
+    /*  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾  */
+
+    /* To enable the transition of gradients */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/@property */
+    @property --stop {
+        syntax: '<percentage>';
+        inherits: false;
+        initial-value: 60%;
+        }
+
+        /* Now I kind of want to learn more about all the @rules */
+
+
+    /* Hover with js for all elements with the same of the .cNumber class */
+    .comment.connected-hover{
+        /* comment boxes */
+        --stop: 150% !important;
+
+    }
+
+    span.connected-hover{
+        /* inline text elemets conneted to the boxes */
+        --stop: 150% !important;
+        width: 6rem;
+    }
+    
+
+
+
+    /*   Custom styling for every comment-link    */
+    /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾  */
+
+
+    /* Chapter 1: How did I end up here ?*/
+    .c1 {
+        border: 1px dashed orangered;
+        background-image: radial-gradient(aliceblue, transparent var(--stop));
+    }
+
+    .c2{
+        border: 1px dashed azure;
+        background-image: radial-gradient(darksalmon, transparent var(--stop));
+    }
+
+    .c3{
+        border: 1px dashed floralwhite;
+        background-image: radial-gradient(thistle, transparent var(--stop));
+    }
+
+    .c4{
+        border: 1px dashed mediumaquamarine;
+        background-image: radial-gradient(lightsteelblue, transparent var(--stop));
+    }
+
+   
+    .c5{
+        border: 1px dashed orange;
+        background-image: radial-gradient(olive, transparent var(--stop));
+    } 
+
+    .c6{
+        border: 1px dashed mediumseagreen;
+        background-image: radial-gradient(orangered, transparent var(--stop));
+    }
+
+    .c7{
+        border: 1px dashed black;
+        background-image: radial-gradient(chartreuse, transparent var(--stop));
+    }
+
+    .c8{
+        border: 1px dashed blue;
+        background-image: radial-gradient(papayawhip, transparent var(--stop));
+    }
+
+
+
+
+    /* Chapter 2: What are you dear comment?*/
+
+    .c9{
+        border: 1px dashed aqua;
+        background: radial-gradient(deeppink, transparent var(--stop)); 
+    }
+
+    .c10{
+        border: 1px dashed orchid;
+        background: radial-gradient(lightgoldenrodyellow, transparent var(--stop)); 
+    }
+
+    .c11{
+        border: 1px dashed palegoldenrod;
+        background: radial-gradient(deepskyblue, transparent var(--stop)); 
+    }
+
+
+
+    /* Chapter 3: A look into the past */
+
+
+    .c12{
+        border: 1px dashed lightskyblue; 
+        background: radial-gradient(thistle,transparent var(--stop));
+    }
+
+    .c13{
+        border: 1px dashed chartreuse; background: radial-gradient(forestgreen,transparent var(--stop));
+    }
+
+    .c14{
+        border: 1px dashed dimgrey; background: radial-gradient(mediumslateblue,transparent var(--stop));
+    }
+
+    .c15{
+        border: 1px dashed floralwhite; background: radial-gradient(coral,transparent var(--stop));
+    }
+    
+    .c16{
+        border: 1px dashed greenyellow; background: radial-gradient(burlywood,transparent var(--stop));
+    }
+
+    .c17{
+        border: 1px dashed lightcyan; background: radial-gradient(aquamarine,transparent var(--stop));
+
+    }
+    
+    .c18{
+        border: 1px dashed slateblue; background: radial-gradient(burlywood,transparent var(--stop));
+    }
+
+    .c19{
+        border: 1px dashed lightsalmon; background: radial-gradient(grey,transparent var(--stop));
+    }
+
+    .c20{
+        border: 1px dashed firebrick; background: radial-gradient(lightskyblue,transparent var(--stop));
+    }
+
+    .c21{
+        border: 1px dashed seagreen; background: radial-gradient(teal,transparent var(--stop));
+    }
+
+    .c22{
+        border: 1px dashed chartreuse; background: radial-gradient(blueviolet,transparent var(--stop));
+    }
+    
+
+    /* Chapter 4: How do you fit into all of this, dear comment? */
+
+    .c23{
+        border: 1px dashed dodgerblue; background: radial-gradient(lightgreen,transparent var(--stop));
+    }
+
+
+
+
+
+
+
+/* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
+
+
+    /* ✴︎✴︎ 05 Chapter Colors ✴︎✴︎ */
+    /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+
+    /* Chapter 1 */
+
+    .how-did-i-end-up-here {
+        background-color: var(--chapterColor);
+        background-image: radial-gradient(var(--chapterAccent), var(--chapterColor) 70%);
+    }
+
+    .how-did-i-end-up-here *, .how-did-i-end-up-here .link-nav > a:visited{
+        color: var(--fontColor);
+    }
+
+    .how-did-i-end-up-here a:visited{
+        color: var(--linkColor);
+    }
+
+    .how-did-i-end-up-here ::selection{
+        background: var(--fontColor);
+        color: var(--chapterColor);
+    }
+
+    .how-did-i-end-up-here .footnote-link{
+        background-color: var(--chapterColor);
+        border: 1px var(--fontColor) solid;
+    }
+
+
+
+  
+
+
+
+    /* Chapter 2 */
+
+    .what-are-you-dear-comment {
+        background-color: var(--chapterColor);
+        background-image: radial-gradient(var(--chapterAccent), var(--chapterColor) 120%);
+    }
+
+    .what-are-you-dear-comment ::selection{
+        background: var(--fontColor);
+        color: var(--chapterColor);
+    }
+
+    body.what-are-you-dear-comment main{
+        /* background-color: red !important; */
+        background-image: linear-gradient(var(--chapterColor) , transparent 10%, transparent 90%, var(--chapterColor));
+    }
+
+    .what-are-you-dear-comment .text{
+        background-image: linear-gradient(90deg, transparent, var(--chapterAccent), transparent);
+        /* background-image: linear-gradient(90deg, var(--chapterAccent), transparent, var(--chapterAccent)); */
+    }
+
+    .gradient-mask-top::before{
+        display: block;
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 10rem;
+       
+        content: "";
+
+        background-image: linear-gradient(var(--chapterColor) 40%, transparent) !important;
+    }
+
+    .gradient-mask-bottom::before{
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 10rem;
+       
+        content: "";
+
+        background-image: linear-gradient(transparent, var(--chapterColor) 40%) !important;
+    }
+
+
+    .what-are-you-dear-comment *, .what-are-you-dear-comment .link-nav > a:visited {
+        color: var(--fontColor);
+    }
+
+    .what-are-you-dear-comment a:visited{
+        color: var(--linkColor); 
+    }
+
+    .what-are-you-dear-comment imagemask{
+        background:var(--fontColor) ;
+    }
+
+    .what-are-you-dear-comment .footnote-link{
+        background-color: var(--chapterColor);
+        border: 1px var(--fontColor) solid;
+    }
+
+   
+
+
+    /* Chapter 3 */
+    
+
+    .a-look-into-the-past{
+        background-color: var(--chapterColor);
+      
+    }
+
+    .a-look-into-the-past *, .a-look-into-the-past .link-nav > a:visited{
+        color: var(--fontColor);
+    }
+
+    .a-look-into-the-past a:visited{
+        color: var(--linkColor); 
+    }
+
+    .a-look-into-the-past ::selection{
+        background: var(--fontColor);
+        color: var(--chapterColor);
+    }
+
+    .a-look-into-the-past imagemask{
+        background:var(--fontColor) ;
+    }
+
+    .a-look-into-the-past .footnote-link{
+        background-color: var(--chapterColor);
+        border: 1px var(--fontColor) solid;
+    }
+
+        /* Custom Gradients for every subchapter so this long-ass page is not to same-ish */
+
+    .subchapter-one{
+        background-image: radial-gradient(var(--sub1), transparent 70%)
+    }
+
+    .subchapter-two{
+        background-image: radial-gradient(var(--sub2), transparent 70%)
+    }
+
+    .subchapter-three{
+        background-image: linear-gradient(90deg, var(--chapterColor), transparent 15%, transparent 85%, var(--chapterColor)), linear-gradient(transparent, var(--sub3) 50%, transparent);
+        /* this was new to me, like the different multiple gradients in one. I like this a lot. */
+    }
+
+    .subchapter-three .text{
+        background-image: linear-gradient(90deg, transparent, var(--chapterColor), transparent )
+    }
+
+
+    .subchapter-four{
+        background-image: radial-gradient(var(--sub4), transparent 70%)
+    }
+
+
+
+
+    /* Chapter 4 */
+
+
+    .how-do-you-fit {
+        background-color: var(--chapterColor);
+        background-image: radial-gradient(var(--chapterColor), var(--chapterAccent), var(--chapterColor)70%);
+    }
+
+    .how-do-you-fit *, .how-do-you-fit .link-nav > a:visited {
+        color: var(--fontColor);
+    }
+
+    .how-do-you-fit a:visited{
+        color: var(--linkColor); 
+    }
+
+    .how-do-you-fit ::selection{
+        background: var(--fontColor);
+        color: var(--chapterColor);
+    }
+
+
+    .how-do-you-fit .text{
+        /* border-left: 1px  solid var(--fontColor); */
+        /* border-right: 1px solid var(--fontColor);  */
+        /* background-image: linear-gradient(90deg, transparent, var(--chapterColor) 25%, var(--chapterColor) 75%, transparent);  */
+        background-image: linear-gradient(90deg,transparent 10%, var(--chapterColor) 50%, transparent 90%);
+    }
+
+    .how-do-you-fit .footnote-link{
+        background-color: var(--chapterColor);
+        border: 1px var(--fontColor) solid;
+    }

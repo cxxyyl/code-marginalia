@@ -66,19 +66,22 @@
         --chapter1Color: gainsboro;
         --chapter1Accent: peachpuff;
         --font1Color: blue; 
+        --link1Color: mediumslateblue; 
 
         --chapter2Color: darkseagreen;
         --chapter2Accent: darkkhaki;
         --font2Color: DarkOliveGreen;
+        --link2Color: olivedrab;
 
         --chapter3Color: rosybrown;
         --chapter3Accent: orangered;
         --font3Color: seashell;
+        --link3Color:snow;
 
         --chapter4Color: paleturquoise;
         --chapter4Accent: lightgoldenrodyellow;
         --font4Color: tomato;
-
+        --link4Color:lightcoral; 
         /* Let‘s hope these are the final selections! */
         /* I haven‘t worked with so many differen colors in a long time, so this process took me a while.
            Also I wnted to do a named css color only website for a long time. I never really used them
@@ -159,9 +162,9 @@
 
 
 /* Everything gets a border */
-* {
+/* * {
     border: 1px solid whitesmoke;
-}
+} */
 
 
 
@@ -399,6 +402,10 @@
 
     /* Links */
 
+    a:visited{
+    color: goldenrod   
+    }
+
     .text a{
         font-family:"ABC ROM Extended Variable", Helvetica, Arial, sans-serif;
         transition: var(--fontTransition);
@@ -512,6 +519,16 @@
             font-size: .75em;
             transform: translateX(10rem)
         }
+
+
+    Today Christoph told me that there was an era of webdesign,
+    where float was used to build fulllayouts for a website 
+    – like a precursor to display:flex. I want to know more
+    about this. But working with float for everything sure
+    sounds like it was a pain? From my first experiences with
+    it, it seems really finicky to make consistent layouts
+    with it. 
+
 
     */
     
@@ -1185,8 +1202,12 @@
         background-image: radial-gradient(var(--chapter1Accent), var(--chapter1Color) 70%);
     }
 
-    .how-did-i-end-up-here * {
+    .how-did-i-end-up-here *, .how-did-i-end-up-here .link-nav > a:visited{
         color: var(--font1Color);
+    }
+
+    .how-did-i-end-up-here a:visited{
+        color: var(--link1Color);
     }
 
     .how-did-i-end-up-here ::selection{
@@ -1198,6 +1219,10 @@
         background-color: var(--chapter1Color);
         border: 1px var(--font2Color) solid;
     }
+
+
+
+  
 
 
 
@@ -1249,8 +1274,12 @@
     }
 
 
-    .what-are-you-dear-comment * {
+    .what-are-you-dear-comment *, .what-are-you-dear-comment .link-nav > a:visited {
         color: var(--font2Color);
+    }
+
+    .what-are-you-dear-comment a:visited{
+        color: var(--link2Color); 
     }
 
     .what-are-you-dear-comment imagemask{
@@ -1262,7 +1291,7 @@
         border: 1px var(--font2Color) solid;
     }
 
-
+   
 
 
     /* Chapter 3 */
@@ -1273,8 +1302,12 @@
       
     }
 
-    .a-look-into-the-past * {
+    .a-look-into-the-past *, .a-look-into-the-past .link-nav > a:visited{
         color: var(--font3Color);
+    }
+
+    .a-look-into-the-past a:visited{
+        color: var(--link3Color); 
     }
 
     .a-look-into-the-past ::selection{
@@ -1326,10 +1359,13 @@
         background-image: radial-gradient(var(--chapter4Color), var(--chapter4Accent), var(--chapter4Color)70%);
     }
 
-    .how-do-you-fit * {
+    .how-do-you-fit *, .how-do-you-fit .link-nav > a:visited {
         color: var(--font4Color);
     }
 
+    .how-do-you-fit a:visited{
+        color: var(--link4Color); 
+    }
 
     .how-do-you-fit ::selection{
         background: var(--font4Color);
@@ -1348,26 +1384,3 @@
         background-color: var(--chapter4Color);
         border: 1px var(--font4Color) solid;
     }
-
-
-
-
-    /* .how-do-you-fit {
-        background-color: var(--chapterColor);
-        background-image: radial-gradient(var(--chapterAccent), var(--chapterColor) 70%);
-    }
-
-    .how-do-you-fit * {
-        color: var(--fontColor);
-    }
-
-    .how-do-you-fit .footnote-link{
-        background-color: var(--chapterColor);
-        border: 1px var(--fontColor) solid;
-    } */
-
-
-
-
-
-  

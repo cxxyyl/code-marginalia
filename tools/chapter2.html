@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" class="what-are-you-dear-comment">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Chapter Two -->
+    <title>What are you, dear comment?</title>
+
+    <link rel="stylesheet" href="../css/lucky.css">
+
+
+</head>
+
+<body class="what-are-you-dear-comment" id="lucky">
+    <nav>
+        <div id="display-style">
+            <div id="chapter"></div>
+            <div id="accent"></div>
+            <div id="font"></div>
+            <div id="link"></div>
+            <div id="sub1"></div>
+            <div id="sub2"></div>
+            <div id="sub3"></div>
+            <div id="sub4"></div>
+        </div>
+        <a href="./index.html">index.html</a>
+    </nav>
+
+    <aside class="stretch-messages">
+        <div id="cramped">Sorry, but I feel cramped now.</div>
+        <div id="stretch">Please stretch me!</div>
+    </aside>
+    
+    <main>
+        <table>
+            <tr>
+                <td></td>
+                <td class="text spacer-table gradient-mask-top"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="text"><h1>What are you, dear comment?</h1></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="text">
+                    <p>
+                        I like the definition of a comment in Markus Krajewski’s text <em>Kulturtechnik
+                        Programmieren</em>, as it is close to how I feel about it. He talks about the two layers of code. The
+                        first layer is the instructions, which are executed by the machine. This is the actual code or text written
+                        in a programming language. The second layer is marked text that is not executed. This piece of text is
+                        ignored by the machine.&NoBreak;<sup class="footnote-link">2</sup> It can be text, code, a mix,
+                        or something like ASCII art. Either way, it does not matter to the machine but to us as readers. To make a
+                        comment or mark text so it will not be executed, you will have to use a specific string of symbols to let
+                        the program know what follows will be a comment. Here is a small example with HTML.&NoBreak;<sup class="footnote-link">3</sup>   
+                    </p>      
+                </td>
+                <td class="align-at-bottom">
+                    <section class="footnote">
+                        <p>
+                            2 Bajohr, Hannes, and Markus Krajewski, eds. <em>Quellcodekritik: zur Philologie von
+                            Algorithmen</em>. Erste Auflage. August Akademie. Berlin: August Verlag, 2024, 66.
+                        </p>  
+                        <p>    
+                            3 Hyper Text Markup Language—It‘s what you use to write a webpage.
+                        </p>    
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="text">
+                    <p>
+                        <code class="code-block">&lt;p&gt; This is a tag used in HTML to define a paragraph of text. What follows below is a comment&lt;/p&gt; </code>
+                        <code class="code-block">&lt;!-- In HTML, you use this combination of symbols to declare a comment. Everything inside here will not show up when you normally view a website. --&gt;</code>
+                        
+                        There are two ways to format a comment: block and inline. A block comment is comparable to a
+                        paragraph of text with one or multiple line breaks. This would be used for a longer comment. Compared to
+                        this, an inline comment is shorter and spans only one line. Here is a quick example of those two types of
+                        comments.
+                        
+                        <code class="code-block">&lt;p&gt;dear reader&lt;/p&gt; &lt;!-- What follows is an inline comment in the same line--&gt;</code>
+                        <code class="code-block">&lt;!-- After this inline comment, I’m currently writing a longer block comment. It spans more than one line of code and has a line break. In the case of HTML, it can be a bit confusing because there is no difference in the symbols used to signify whether it’s an inline or a block comment. --&gt;</code>
+                    </p>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="text">
+                    <p>
+                        This can be handled differently depending on the programming language. There is a lot of variation
+                        in the different symbol strings that mark a comment.&NoBreak;<sup class="footnote-link">4</sup> For the
+                        programming languages I’m familiar with they are as follows:
+                    </p>
+                    <ul>
+                        <li>
+                            <p>HTML uses this <code>&lt;!-- comment --&gt;</code> for both inline and block comments.</p>
+                        </li>
+                        <li>
+                            <p>CSS uses this <code>/* comment */</code> also for both inline and block comments.</p>
+                        </li>
+                        <li>
+                            <p>
+                                JavaScript and PHP both use <code>//comment</code> for inline comments and <code>/* comment */</code>
+                                for block comments.
+                            </p>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <section class="footnote">
+                        <p>
+                            4 Here is a compilation of how to write a comment in a lot of different programming languages. In:
+                            Davids Kacs. “Comments in Different Programming Languages.” Accessed April 7, 2025. 
+                            <a href="https://gist.github.com/dk949/88b2652284234f723decaeb84db2576c" target="_blank">https://gist.github.com/dk949/88b2652284234f723decaeb84db2576c</a>.
+                        </p>
+                    </section>    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <section class="comment c9">
+                        <p>
+                            This text has comments as well. Originally, this text was written in Obsidian, a
+                            note-taking software that uses <a href="https://daringfireball.net/projects/markdown/" target="_blank">Markdown</a> 
+                            as its sort of programming language. The comments I am writing inside
+                            Obsidian are declared by typing <code>%%</code>. All the text that follows will be treated as a comment.
+                            To close it and return to the regular text, I must type <code>%%</code> again.
+                        </p>
+                    </section> 
+                </td>
+                <td class="text">
+                    <p><span class="comment-link c9"></span>
+                        Either way, even though the way to mark a text as a comment differs for many programming
+                        languages, the functions stay the same. The one I want to focus on is communicating something that is
+                        intended for human readers.&NoBreak;<sup class="footnote-link">5</sup> As something that seems
+                        trivial but has been picked up repeatedly by different authors, the code has a certain duality to it.<sup class="footnote-link">6</sup> 
+                        It is read by humans as well as machines. More specifically,
+                        it is a text read by humans and performed&NoBreak;<sup class="footnote-link">7</sup> by
+                        machines. This raises the question of who we are writing code for: machine or human? It may seem like we are
+                        writing code for the machine to tell it what to do, but are we really? I like how Vikram Chandra puts Donald
+                        Knuth’s struggle with this question in Geek Sublime.
+                    </p>
+                    <blockquote>
+                        <p>
+                            If ever there was a person who fluently spoke the native idiom of machines, it is Knuth, computing’s
+                            great living sage. More than anyone else, he understands the paradox that programmers write code for
+                            other humans, not for machines: “Let us change our traditional attitude to the construction of programs:
+                            Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather
+                            on explaining to human beings what we want a computer to do.<sup class="footnote-link"> 8</sup>
+                        </p>
+                    </blockquote>
+                </td>
+                <td class="align-at-bottom">
+                    <section class="footnote">
+                        <p>
+                            5 Of course, there are many potential uses of a comment besides communication. One that comes to
+                            mind is commenting out code. If the goal is to have a piece of code not perform while still
+                            keeping it, the code can be put in a comment. In a way, this code is stored in a state of limbo,
+                            hidden from the machine, but maybe also not that relevant to the human reader. 
+                        </p>
+                        <p>
+                            6 In a way, all of this can probably be traced back to the seminal book <em>The Art of
+                            Programming</em> by Donald Knuth. A lot of the texts I read trace this statement back to
+                            Knuth. 
+                        </p>
+                        <p>
+                            7 I really like the wording of performing code instead of executing code here; I took it from
+                            Hannes Bajohrs and Markus Krajewski’s introduction to their book. In: Bajohr, Hannes, and Markus
+                            Krajewski, eds. <em>Quellcodekritik: zur Philologie von Algorithmen</em>. Erste Auflage. August
+                            Akademie. Berlin: August Verlag, 2024, 15.
+                        </p>
+                        <p>
+                            8 Chandra, Vikram. <em>Geek Sublime: The Beauty of Code, the Code of Beauty</em>. Minneapolis,
+                            Minnesota: Graywolf Press, 2014, 14-5.
+                        </p>
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="text">
+                    <p>
+                        Knuth, a big proponent of writing code meant to be read and understood by humans, coined the term
+                        <em>literate programming</em> in his 1984 paper and later, in 1992, wrote a book about it. In his case, he
+                        advocated for code as a form of discourse between people—the coder as writer and essayist. For Knuth, code
+                        should be clear, legible, and communicate its function. Additionally, all the code should be documented in a
+                        way that explains how exactly the code works in an elaborate literary way.<sup class="footnote-link">9</sup> 
+                        He suggests writing code so that big parts of the code are
+                        only important to the human reader, not the performing machine. An excerpt from Ross Williams sums this up
+                        nicely on Daniel Mall’s website <a href="http://www.literateprogramming.com/index.html" target="_blank">literateprogramming.com</a>.
+                    </p>
+                </td>
+                <td class="align-at-bottom">
+                    <section class="footnote">
+                        <p>
+                            9 Knuth, D. E. “Literate Programming.” <em>The Computer Journal</em> 27, no. 2 (February 1, 1984):
+                            97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97" target="_blank">https://doi.org/10.1093/comjnl/27.2.97</a>; and Knuth, Donald Ervin.
+                            <em>Literate Programming</em>. CSLI Lecture Notes, no. 27. Stanford, Calif.: Center for the
+                            Study of Language and Information, 1992.
+                        </p>
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="text">
+                    <blockquote>
+                        <p>
+                            A traditional computer program consists of a text file containing program code. Scattered in amongst the
+                            program code are comments which describe the various parts of the code. In literate programming the
+                            emphasis is reversed. Instead of writing code containing documentation, the literate programmer writes
+                            documentation containing code.<sup class="footnote-link">10</sup>
+                        </p>
+                    </blockquote>
+                </td>
+                <td class="align-at-bottom">
+                    <section class="footnote">
+                        <p>
+                            10 Ross Williams. “Literate Programming.” Accessed April 7, 2025. 
+                            <a href="http://www.literateprogramming.com/index.html" target="_blank">http://www.literateprogramming.com/index.html</a>.
+                        </p>
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td class="align-at-bottom">
+                    <section class="comment c10">
+                        <p>
+                            I also get the same feeling when coding. There are always people out there who had the same
+                            problem and already solved it.
+                        </p>
+                    </section>
+                
+                </td>
+                <td class="text">
+                    <p>
+                        The focus is on the human. The comment is one way to achieve this programming paradigm, as it has
+                        a singular human audience. Knuth went down his own rabbit hole with this and created a whole system to
+                        program this way.<sup class="footnote-link">11</sup> This also questions the
+                        important part of the code—for Knuth, it’s the comment or the documentation. Similarly, certain currents in
+                        literary studies, such as Critical Code Studies or Source Code Criticism, also question this topic. While
+                        Critical Code Studies focus more on the meaning and implications of code in terms of the social context,<sup class="footnote-link">12</sup> Source Code Criticism is more about developing and
+                        generating an understanding of code by enriching the code with knowledge about its origin, function and
+                        context.<sup class="footnote-link">13</sup> Bajohr and Krajewski’s take
+                        on Source Code Criticism is that the comment is a central tool for documenting and explaining code for
+                        further study without interrupting the aspect of the machine performing the code.<sup class="footnote-link">14</sup> 
+                        This way of thinking about the relation between code and
+                        comment really resonates with me. Going into this text, I had some of my own ideas about the relation
+                        between code and comment, and it’s always nice to realize there were others before me who also thought about
+                        this. <span class="comment-link c10"></span> Everything is so relational—Code or writing, it always happens on
+                        the back of others who came before me. Quoting other writing, copying code others have written, writing
+                        notes, and writing comments. While writing this text, there is a multitude of different annotations, like my
+                        personal notes, all the comments, and footnotes. I’m wondering what the important part is—my writing,
+                        personal anecdotes, or the original texts of others I refer to in the footnotes, with this text being a kind
+                        of fluff piece to contain them. What is the central or essential part of the writing, and what should be
+                        highlighted?
+                    </p>
+                </td>
+                <td>
+                    <section class="footnote">
+                        <p>
+                            10 Ross Williams. “Literate Programming.” Accessed April 7, 2025. 
+                            <a href="http://www.literateprogramming.com/index.html"target="_blank">http://www.literateprogramming.com/index.html</a>.
+                        </p>
+                        <p>
+                            11 Knuth really committed to literate programming. He created WEB, later 
+                            <a href="https://www-cs-faculty.stanford.edu/~knuth/cweb.html" target="_blank">CWEB</a>, a whole documentation system. Adjacent to this, he also created 
+                            <a href="https://tug.org/whatis.html" target="_blank">TeX</a>, a
+                            typesetting system because he was unhappy with digital type settings at that time, which then
+                            led him to create MetaFont to make fonts look good in TeX. Two examples of literate programming
+                            are Kuth‘s publications <em class="not-source">The TeXbook</em> and <em class="not-source">The METAFONTbook</em>, both of which used
+                            web WEB and TeX in the process. 
+                        </p>
+                        <p>
+                            12 Marino, Mark C. <em>Critical Code Studies</em>. Software Studies. Cambridge, Massachusetts: The
+                            MIT Press, 2020.
+                        </p>
+                        <p>
+                            13 Bajohr, Hannes, and Markus Krajewski, eds. <em>Quellcodekritik: zur Philologie von
+                            Algorithmen</em>. Erste Auflage. August Akademie. Berlin: August Verlag, 2024.
+                        </p>
+                        <p>
+                            14 Bajohr, Hannes, and Markus Krajewski, eds. <em>Quellcodekritik: zur Philologie von
+                            Algorithmen</em>. Erste Auflage. August Akademie. Berlin: August Verlag, 2024, 64.
+                        </p>
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="text">
+                    <figure class="marginalia-in-a-book">
+                        <imagemask alt="A page in a handwirtten book from the Middle Ages. It‘s beautifully decorated with marginalia."></imagemask>
+                        <figcaption>Marginalia in a handwritten book from the Middle Ages</figcaption>
+                    </figure>
+                    <p><span class="indent"></span>
+                        Approaching this from the position of a graphic designer, there is also always a decision to be
+                        made about the importance of the running text and everything adjacent to it. What are the relations between
+                        the font sizes, how much space will I give footnotes on a page, will they be part of the margin or the
+                        running text, and how big will I make the margin? Thinking about the aesthetics of the very traditional ways
+                        of book setting from the Middle Ages or the more modern formalized constructions of the print area from the
+                        likes of Jan Tschichold, they seem to me like there is an emphasis on big margins.
+                    </p>
+                    <div ></div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="align-at-bottom">
+                    <section class="comment c11">          
+                        <p>
+                            Going back to how it came to this specific topic, I
+                            think my talks with Polina about websites, making websites, and the poetic web are factors why I decided
+                            to write about this topic. I have been interested in comments for a long time. I was also looking at
+                            source code to find comments, but talking to Polina before and after their 
+                            <a href="https://words-on-margins.website/" target="_blank">workshop</a> about
+                            the topic of code marginalia was the last push that made me decide to also take a deeper look at
+                            comments and what they mean for me.
+                        </p>
+                    </section>
+                </td>
+                <td class="text">
+                    <figure class="page-construction">
+                        <imagemask alt="A diagram that shows how to geometrically construct a page layout."></imagemask>
+                        <figcaption>Print area construction for a book page</figcaption>
+                    </figure>
+                    <p> <span class="indent"></span>
+                        Apart from the arguments on aesthetics, there is plenty of space for notes. To me, these gestures
+                        emphasize commenting, taking notes, or writing your own thoughts in a book that has the physical space for
+                        it.<sup class="footnote-link">15</sup> In short, there is a lot of
+                        space for marginalia—all the sorts of things that are happening in the margins of a book.<sup class="footnote-link">16</sup> 
+                        I like that marginalia are a somewhat open space for what
+                        they can be. Everything that happens in the margins or outside of the print area is available for anyone—a
+                        sort of free commons on the book page. This feeling does not translate one-to-one for me when going from
+                        writing to coding—or a text editor to a coding environment. All of these thoughts of footnotes, quotes,
+                        annotations, and marginalia meld together into a comment—or more like they all exist in the space between
+                        the opening and closing string of a comment. Although I included marginalia into this space, that is, the
+                        comment out of all of the forms of different annotations, marginalia feels closest to comments in terms of
+                        openness—as comments, as well as marginalia, can be pretty open spaces in terms of what happens inside them.
+                        This also brings me to the title of this thesis <em>Code Marginalia</em>. For me, marginalia serves
+                        primarily as a lens through which to view comments, to figure out what they are, how to approach them, and
+                        how to connect them to other forms of annotation. This title and topic are also in relation to the ongoing
+                        research <a href="https://kimkleinert.com/" target="_blank">Kim Kleinert</a> and 
+                        <a href="https://polinsski.digitale-grafik.com/" target="_blank">Polina Lobanova</a>
+                        about <a class="external-link" href="https://www.are.na/marginalia/channels" target="_blank">Marginalia on the Web</a>.<span class="comment-link c11"></span>
+                    </p>
+                    <p><span class="indent"></span>
+                        To better understand where comments are coming from, I would like to take a closer look at the
+                        history of comments and coding in general. But I also want to take a short detour and glance at the history
+                        of marginalia.
+                    </p>
+                </td>
+                <td class="align-at-bottom">
+                    <section class="footnote">
+                        <p>
+                            15 Looking deeper into this relationship between our relationship to books, how we use them, and how
+                            margins evolved in modern typesetting or printmaking is a rabbit hole I will not go down, but
+                            I‘m curious what kind of relationships could be uncovered.
+                        </p>
+                        <p>
+                            16 As for how to define marginalia, there is the 
+                            <a href="https://www.merriam-webster.com/dictionary/marginalia" target="_blank">Merriam Webster definition of marginalia</a>: 1.&nbsp;
+                            <a href="https://www.merriam-webster.com/dictionary/marginal" target="_blank">marginal</a>&nbsp;
+                            notes or embellishments (as in a book) 2.&nbsp;nonessential items. As it is with marginalia, this dual definition also feels like a
+                            good fit for comments. As a side note: I also really like the definition of the 
+                            <a href="https://en.wikipedia.org/wiki/Marginalia" target="_blank">english Wikipedia Article on Marginalia </a> 
+                            as it includes links to all the different forms of graphical elements
+                            (embellishments in the Merriam Webster definition) like doodles or drolleries. There is also
+                            this really nice <a href="https://www.youtube.com/watch?v=skUs534pBj4" target="_blank">Interview from the State Library of Victoria about Marginalia</a> that sums
+                            up what marginalia are and also shows some nice examples. 
+                        </p> 
+                    </section>  
+                </td>
+            </tr>      
+            <tr>
+                <td class="link-nav"><a href="./chapter1.html">Previous Chapter</a></td>
+                <td class="text spacer-table gradient-mask-bottom" ></td>
+                <td class= "link-nav"><a href="./chapter3.html">Next Chapter</a></td>
+            </tr>
+        </table>
+    </main>
+
+
+<!--  
+            <tr>
+                <td></td>
+                <td class="text">
+   
+                </td>
+                <td></td>
+            </tr>
+
+            <span class="comment-link cX"></span>
+            <p class="cX"></p>
+
+            <span class="indent"></span>
+            <sup class="footnote-link"></sup>
+
+-->
+
+<script src="../js/make-it-run.js"></script>
+</body>
+</html>

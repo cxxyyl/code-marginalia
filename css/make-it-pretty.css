@@ -1,12 +1,39 @@
 /* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
 
 
-   /* ⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄ */
-   /* Make this ✿pretty✿ css */
-   /* ⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃ */
+    /* ⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄ */
+    /* Make this ✿pretty✿ css */
+    /* ⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃⌃ */
 
 
-   /* This website was made to be viewed at a width of 1695px */
+    /* This website was made to be viewed at a width of 1695px */
+
+
+    /* 
+
+    Table of Contents
+    ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                (line)
+                                     
+    Font Import --------------------- 42
+    Variables ----------------------- 78
+    Dev Tools ----------------------- 187
+
+    01 Set-Up ----------------------- 201
+    02 General Typography ----------- 305
+    03 Images ----------------------- 496
+    04 Styling for Margin Elements -- 928
+    05 Chapter Colors --------------- 1214
+    06 Index ------------------------ 1416
+    
+
+    */
+
+
+
+
+
+
+
 
 /* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
 
@@ -272,13 +299,6 @@
 
 
 
-
-
-
-
-
-
-
 /* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
 
 
@@ -401,10 +421,6 @@
 
 
     /* Links */
-
-    a:visited{
-    color: goldenrod   
-    }
 
     .text a{
         font-family:"ABC ROM Extended Variable", Helvetica, Arial, sans-serif;
@@ -1046,7 +1062,6 @@
     .comment.connected-hover{
         /* comment boxes */
         --stop: 150% !important;
-
     }
 
     span.connected-hover{
@@ -1384,3 +1399,240 @@
         background-color: var(--chapter4Color);
         border: 1px var(--font4Color) solid;
     }
+
+
+
+
+
+
+    /* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
+
+
+    /* ✴︎✴︎ 06 Index ✴︎✴︎ */
+    /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+    .index{
+        width: 100vw;
+        height: 100vh;
+        background-color: lightblue;
+    }
+
+
+    /* Container for the whole Title */
+    .titlecard{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        width: 90rem;
+        height: 50rem;
+
+        border: 1px dashed black;
+        border-radius: 1rem;
+
+        background: radial-gradient(whitesmoke, transparent 70%);
+    }
+
+    .title{
+        position: absolute;
+        top: 2.5rem;
+        left: 2rem;
+        z-index: 2;
+    }
+
+    .title h1, .title h2{
+        text-align: left !important;
+        font-weight: 350 !important;
+    }
+
+    .title h1{
+        margin: 0;
+
+        font-size: 3rem;
+    }
+    .title h2{
+        margin: 0;
+        padding-top: 0.9rem;
+        padding-left: 0.2rem;
+
+        font-size: 1.3rem;
+    }
+
+
+
+
+
+
+
+
+
+    .index-chapters{
+        position: absolute;
+        top:  50%;
+        right: 10%;
+        transform: translateY(-50%);
+
+        width: 40rem;
+        height: 40rem;
+        border: 1px black dashed;
+
+
+        border-radius: 2000rem;
+
+
+        font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        font-weight: 300;
+    }
+
+    /* .end-circle{
+        position: absolute;
+        background: whitesmoke;
+        width: calc(14rem - 1px);
+        height: 16.7rem;
+    } */
+
+    .chapters{
+        position: absolute;
+        user-select: none;
+        width:10rem;
+        text-decoration: none;
+        padding: 1rem;
+        text-align: center;
+
+        color: black;
+        border: 1px black dashed;
+        border-radius: 1rem;
+        backdrop-filter: blur(20px);
+
+        transition: border 300ms ease ;
+
+        /* transition: --stop 750ms ease; */
+    }
+
+    /* .chapters:hover{
+        --stop: 150% !important;
+    } */
+
+    .chapter1{
+        left: 50%;
+        transform: translate(-50%, -34%);
+
+        /* background: radial-gradient(var(--chapter1Color),transparent var(--stop));*/
+   
+    }
+
+
+    .chapter2{
+        top: 50%;
+        right: 0;
+        transform: translate(50%,-50%);
+        /* border: 1px dashed var(--chapter2Accent); */
+        /* background: radial-gradient(var(--chapter2Color),transparent var(--stop));*/
+        /* background-color: var(--chapter2Color); */
+        /* color: var(--font2Color) !important;  */
+    }
+
+    .chapter3{
+        left: 50%;
+        bottom: 0; 
+        transform: translate(-50%,34%);
+        /* border: 1px dashed var(--chapter3Accent); */
+        /* background: radial-gradient(var(--chapter3Color),transparent var(--stop));*/
+        /* background-color: var(--chapter3Color); */
+        /* color: var(--font3Color) !important;  */
+    }
+
+    .chapter4{
+        top: 50%;
+        transform: translate(-50%,-50%);
+        /* border: 1px dashed var(--chapter4Accent); */
+        /* background: radial-gradient(var(--chapter4Color),transparent var(--stop));*/
+        /* background-color:var(--chapter4Color) ; */
+        /* color: var(--font4Color) !important;  */
+    }
+
+    .table-of-content1,
+    .table-of-content2, 
+    .table-of-content3, 
+    .table-of-content4{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+        user-select: none;
+
+        padding: 1rem;
+        border: 1px dashed black; 
+        border-radius: 1rem;
+
+        transition: opacity 300ms ease;
+        transition-delay: 100ms !important;
+    }
+
+    .chapter1:hover ~ .table-of-content1, 
+    .chapter2:hover ~ .table-of-content2, 
+    .chapter3:hover ~ .table-of-content3, 
+    .chapter4:hover ~ .table-of-content4
+    {
+        opacity: 1;
+    }
+
+    .chapter1:hover ~ .line1{
+        height: 14.9rem;
+    }
+
+    .chapter2:hover ~ .line2{
+        width: 10.1rem;
+    }
+
+    .chapter3:hover ~ .line3{
+        height: 14.8rem;
+    }
+
+    .chapter4:hover ~ .line4{
+        width: 10.1rem;
+    }
+
+    
+
+    .line1{
+        position: absolute;
+        left: 50%;
+        top: 3.3rem;
+        height: 0;
+        border-left: 1px dashed black;
+        transition: all 300ms ease;
+
+    }
+
+    .line2{
+        position: absolute;
+        right: 15.1%;
+        top: 50%;
+        width: 0;
+        border-top: 1px dashed black;
+        transition: all 300ms ease;
+    }
+
+    .line3{
+        position: absolute;
+        left: 50%;
+        bottom: 3.4rem;
+        height: 0;
+        border-left: 1px dashed black;
+        transition: all 300ms ease;
+    }
+
+    .line4{
+        position: absolute;
+        left: 15.1%;
+        top: 50%;
+        width: 0;
+        border-top: 1px dashed black;
+        transition: all 300ms ease;
+    }
+

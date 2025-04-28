@@ -11,19 +11,33 @@
             font-family: sans-serif;
             display: flex;
             justify-content: center;
-            background-color: cornflowerblue;
+            background-color: darkkhaki;
         }
 
         main {
             padding: 2rem;
-            width: 600px;
-            background-color: whitesmoke;
+            width: 700px;
+            color: whitesmoke;
+            border: 2px dashed whitesmoke;
         }
 
         p {
             font-size: 1.3rem;
             line-height: 1.7rem;
         }
+
+        a{
+            line-break: anywhere;
+        }
+
+        mark{
+            background-color: cornflowerblue;
+        color: whitesmoke;
+        filter: saturate(0.6);
+        }
+
+        mark::before{content: "%% ";}
+        mark::after{content: " %%";}
     </style>
 
 

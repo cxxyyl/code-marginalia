@@ -16,14 +16,14 @@
                                      
     Font Import --------------------- 42
     Variables ----------------------- 78
-    Dev Tools ----------------------- 187
+    Dev Tools ----------------------- 190
 
-    01 Set-Up ----------------------- 201
-    02 General Typography ----------- 305
+    01 Set-Up ----------------------- 205
+    02 General Typography ----------- 309
     03 Images ----------------------- 496
-    04 Styling for Margin Elements -- 928
-    05 Chapter Colors --------------- 1214
-    06 Index ------------------------ 1416
+    04 Styling for Margin Elements -- 927
+    05 Chapter Colors --------------- 1212
+    06 Index ------------------------ 1414
     
 
     */
@@ -36,7 +36,6 @@
 
 
 /* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
-
 
 
 
@@ -75,6 +74,7 @@
 
 
 
+
     :root{
         /* ToDo: now that it is a universal css and not in <style> anymore, rember to adapt all variables so they fit to the corresponding chapters */
 
@@ -89,35 +89,40 @@
 
         /* Colors */
 
-        /* Chapter 1:  How did I end up here ?*/
+        /* Chapter 1: How did I end up here?*/
         --chapter1Color: gainsboro;
         --chapter1Accent: peachpuff;
         --font1Color: blue; 
         --link1Color: mediumslateblue; 
 
+        /* Chapter 2: What are you, dear comment?*/
         --chapter2Color: darkseagreen;
         --chapter2Accent: darkkhaki;
         --font2Color: DarkOliveGreen;
         --link2Color: olivedrab;
 
+        /* Chapter 3: A look into the past*/
         --chapter3Color: rosybrown;
         --chapter3Accent: orangered;
         --font3Color: seashell;
         --link3Color:snow;
 
+        /* Chapter 4: How do you fit into all of this, dear comment?*/
         --chapter4Color: paleturquoise;
         --chapter4Accent: lightgoldenrodyellow;
         --font4Color: tomato;
         --link4Color:lightcoral; 
         /* Let‘s hope these are the final selections! */
         /* I haven‘t worked with so many differen colors in a long time, so this process took me a while.
-           Also I wnted to do a named css color only website for a long time. I never really used them
+           Also I wanted to do a named css color only website for a long time. I never really used them
            that much before. After building a little script to go through all possible color combinations 
-           I realizied that there are some really nice pairings in the 9800 possible two-tones. 
-                
-        
+           I realizied that there are some really nice pairings in the 9800 possible two-tones.      
         */
 
+        /* Title / index */
+        --titleColor: mediumaquamarine;
+        /* --titleAccent: lightpink; */
+        --titleFontColor: white;
         
         
      
@@ -176,8 +181,6 @@
 
 
 
-
-
 /* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
 
 
@@ -197,6 +200,7 @@
 
 
 /* ⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟⌜⌔⌝⌞⌔⌟ */
+
 
     /* ✴︎✴︎ 01 Setup ✴︎✴︎ */
     /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
@@ -890,7 +894,6 @@
             }
         }
 
-
         .stack-of-punchcards{
             padding: 1rem 0rem;
             /* margin-left: 0rem;
@@ -1414,225 +1417,157 @@
     .index{
         width: 100vw;
         height: 100vh;
-        background-color: lightblue;
+        background-color: var(--titleColor);
+        user-select: none;
+
+        /* background: linear-gradient(90deg, var(--titleAccent), transparent, var(--titleAccent)); */
+  
+     
+        /* Container for the whole Title */
+        .thirds{
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+
+            height: 100vh;
+            width: 600px;
+
+            border-left: 1px dashed var(--titleFontColor);
+            border-right: 1px dashed var(--titleFontColor);
+            background: linear-gradient(90deg, var(--titleAccent), transparent, var(--titleAccent));
+
+        }
+
+        .titlecard{
+            
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            height: 40rem;
+            width: calc(600px - 4rem);
+        }
+
+  
+        h1, h2, h3{
+            text-align: left !important;
+            font-weight: 400 !important;
+            color: var(--titleFontColor);
+        }
+
+        h1{
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        h2{
+            margin: 0;
+            padding-top: 0.9rem;
+            padding-left: 0.2rem;
+
+            font-size: 1.3rem;
+        }
+
+        h3{
+            font-size: 1.3rem;
+            padding: 0;
+            margin: 0;
+        }   
+
+
+        /* Table of Contents */
+        .index-chapters{
+
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            padding: 0;
+            padding-top: 10rem;
+            margin: 0;
+
+            font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
+            font-size: 1.3rem;
+            line-height: 1.5rem;
+            font-weight: 300;
+
+
+        }
+
+        .chapter{   
+            user-select: none;
+            /* width:28rem; */
+            width: max-content;
+            text-decoration: none;
+            padding: 0.3rem 0.6rem;
+            text-align: center;
+
+            color: var(--titleFontColor);
+            border: 1px var(--titleFontColor) dashed;
+            border-radius: .3rem;
+
+            transition: var(--fontTransition);
+        }
+
+        .chapter:hover{
+            font-weight: 400;
+        }
+
+        /* About */
+        details{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: calc(100% - 2rem);
+
+            display: flex;
+            flex-direction: column;
+            padding: 0.3rem 0.6rem;
+
+            border: 1px dashed var(--titleFontColor);
+            border-radius: .3rem;
+
+            color: var(--titleFontColor);
+            
+            article{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-around;
+            }
+
+            section{
+                padding-top: 1rem;
+            }
+                
+            }
     }
 
-
-    /* Container for the whole Title */
-    .titlecard{
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    @media  screen and (max-width: 601px) {
         
-        width: 90rem;
-        height: 50rem;
+        .index{
+            .title, .index-chapters, details{
+                user-select: none;
+                opacity: 0;
+            }
 
-        border: 1px dashed black;
-        border-radius: 1rem;
+            .titlecard::after{
+                content: "Thank you for visiting this website ⚘ I would appreciate it very much, if you would visit this website again on a larger and wider screen ⚘ This website needs a lot of space for marginalia, and this is not possible on a mobile device ⚘ Thank you <3";
 
-        background: radial-gradient(whitesmoke, transparent 70%);
+                position: fixed;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 50%;
+
+                font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
+                font-size: 1.3rem;
+                line-height: 1.5rem;
+                font-weight: 300;
+
+                color: var(--titleFontColor);
+            }
+        }
+
+        
     }
-
-    .title{
-        position: absolute;
-        top: 2.5rem;
-        left: 2rem;
-        z-index: 2;
-    }
-
-    .title h1, .title h2{
-        text-align: left !important;
-        font-weight: 350 !important;
-    }
-
-    .title h1{
-        margin: 0;
-
-        font-size: 3rem;
-    }
-    .title h2{
-        margin: 0;
-        padding-top: 0.9rem;
-        padding-left: 0.2rem;
-
-        font-size: 1.3rem;
-    }
-
-
-
-
-
-
-
-
-
-    .index-chapters{
-        position: absolute;
-        top:  50%;
-        right: 10%;
-        transform: translateY(-50%);
-
-        width: 40rem;
-        height: 40rem;
-        border: 1px black dashed;
-
-
-        border-radius: 2000rem;
-
-
-        font-family:"ABC ROM Variable", Helvetica, Arial, sans-serif;
-        font-size: 1.3rem;
-        line-height: 1.5rem;
-        font-weight: 300;
-    }
-
-    /* .end-circle{
-        position: absolute;
-        background: whitesmoke;
-        width: calc(14rem - 1px);
-        height: 16.7rem;
-    } */
-
-    .chapters{
-        position: absolute;
-        user-select: none;
-        width:10rem;
-        text-decoration: none;
-        padding: 1rem;
-        text-align: center;
-
-        color: black;
-        border: 1px black dashed;
-        border-radius: 1rem;
-        backdrop-filter: blur(20px);
-
-        transition: border 300ms ease ;
-
-        /* transition: --stop 750ms ease; */
-    }
-
-    /* .chapters:hover{
-        --stop: 150% !important;
-    } */
-
-    .chapter1{
-        left: 50%;
-        transform: translate(-50%, -34%);
-
-        /* background: radial-gradient(var(--chapter1Color),transparent var(--stop));*/
-   
-    }
-
-
-    .chapter2{
-        top: 50%;
-        right: 0;
-        transform: translate(50%,-50%);
-        /* border: 1px dashed var(--chapter2Accent); */
-        /* background: radial-gradient(var(--chapter2Color),transparent var(--stop));*/
-        /* background-color: var(--chapter2Color); */
-        /* color: var(--font2Color) !important;  */
-    }
-
-    .chapter3{
-        left: 50%;
-        bottom: 0; 
-        transform: translate(-50%,34%);
-        /* border: 1px dashed var(--chapter3Accent); */
-        /* background: radial-gradient(var(--chapter3Color),transparent var(--stop));*/
-        /* background-color: var(--chapter3Color); */
-        /* color: var(--font3Color) !important;  */
-    }
-
-    .chapter4{
-        top: 50%;
-        transform: translate(-50%,-50%);
-        /* border: 1px dashed var(--chapter4Accent); */
-        /* background: radial-gradient(var(--chapter4Color),transparent var(--stop));*/
-        /* background-color:var(--chapter4Color) ; */
-        /* color: var(--font4Color) !important;  */
-    }
-
-    .table-of-content1,
-    .table-of-content2, 
-    .table-of-content3, 
-    .table-of-content4{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        opacity: 0;
-        user-select: none;
-
-        padding: 1rem;
-        border: 1px dashed black; 
-        border-radius: 1rem;
-
-        transition: opacity 300ms ease;
-        transition-delay: 100ms !important;
-    }
-
-    .chapter1:hover ~ .table-of-content1, 
-    .chapter2:hover ~ .table-of-content2, 
-    .chapter3:hover ~ .table-of-content3, 
-    .chapter4:hover ~ .table-of-content4
-    {
-        opacity: 1;
-    }
-
-    .chapter1:hover ~ .line1{
-        height: 14.9rem;
-    }
-
-    .chapter2:hover ~ .line2{
-        width: 10.1rem;
-    }
-
-    .chapter3:hover ~ .line3{
-        height: 14.8rem;
-    }
-
-    .chapter4:hover ~ .line4{
-        width: 10.1rem;
-    }
-
-    
-
-    .line1{
-        position: absolute;
-        left: 50%;
-        top: 3.3rem;
-        height: 0;
-        border-left: 1px dashed black;
-        transition: all 300ms ease;
-
-    }
-
-    .line2{
-        position: absolute;
-        right: 15.1%;
-        top: 50%;
-        width: 0;
-        border-top: 1px dashed black;
-        transition: all 300ms ease;
-    }
-
-    .line3{
-        position: absolute;
-        left: 50%;
-        bottom: 3.4rem;
-        height: 0;
-        border-left: 1px dashed black;
-        transition: all 300ms ease;
-    }
-
-    .line4{
-        position: absolute;
-        left: 15.1%;
-        top: 50%;
-        width: 0;
-        border-top: 1px dashed black;
-        transition: all 300ms ease;
-    }
-

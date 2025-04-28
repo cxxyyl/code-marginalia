@@ -3,48 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon//favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon//site.webmanifest">
+
     <title>Code Marginalia</title>
+    <meta name="description"
+    content="Code Marginalia is an exploration of writing comments in web code. I wrote this text as my 
+             bachelor thesis at the HFBK Hamburg 2025. In it, I try to learn more about the history and 
+             practice of writing comments and process my own feelings and impressions about making web.">
+
     <link rel="stylesheet" href="css/make-it-pretty.css">
 
 
-    <!-- <style>
-        *{
-            border: 1px solid red; 
-        }
-    </style> -->
+
+    <!-- 
+    ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※
+    ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ 
+    ◻︎ ※                                                     ◻︎ ※ 
+    ※ ◻︎  Welcome to this part of the website, dear visitor  ※ ◻︎ 
+    ◻︎ ※                                                     ◻︎ ※ 
+    ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ 
+    ◻︎ ※                                                     ◻︎ ※ 
+    ※ ◻︎         Feel free to explore this source ♨️         ※ ◻︎ 
+    ◻︎ ※                                                     ◻︎ ※ 
+    ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ 
+    ◻︎ ※                                                     ◻︎ ※
+    ※ ◻︎     Code Marginalia –                               ※ ◻︎
+    ◻︎ ※     About commenting on web code                    ◻︎ ※
+    ※ ◻︎                                                     ※ ◻︎
+    ◻︎ ※     Bachelor Thesis                                 ◻︎ ※
+    ※ ◻︎     Klasse Digitale Grafik                          ※ ◻︎
+    ◻︎ ※     HFBK Hamburg, 2025                              ◻︎ ※
+    ※ ◻︎                                                     ※ ◻︎
+    ◻︎ ※     Advisors:                                       ◻︎ ※
+    ※ ◻︎     Konrad Renner                                   ※ ◻︎
+    ◻︎ ※     🕸️ https://knoth-renner.com/ 🕸️                  ◻︎ ※                      
+    ※ ◻︎                                                     ※ ◻︎
+    ◻︎ ※     Christoph Knoth                                 ◻︎ ※
+    ※ ◻︎     🕸️ https://knoth-renner.com/ 🕸️                  ※ ◻︎
+    ◻︎ ※                                                     ◻︎ ※
+    ※ ◻︎     Elisa Linseisen (Theory)                        ※ ◻︎
+    ◻︎ ※     🕸️ https://elisalinseisen.com/ 🕸️                ◻︎ ※
+    ※ ◻︎                                                     ※ ◻︎
+    ◻︎ ※                                                     ◻︎ ※
+    ※ ◻︎                                                     ※ ◻︎
+    ◻︎ ※     by Stephan Thiel / cxxyyl                       ◻︎ ※
+    ※ ◻︎     🕸️ https://cxxyyl.xyz/ 🕸️                        ※ ◻︎
+
+            
+
+
+    ◻︎ ※                                                     ◻︎ ※
+    ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ 
+    ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ ◻︎ ※ 
+    -->
+
 
 </head>
+
+
+<!-- 
+    To be honest, I was sure that I would write more things while trying to figure out how I want this website to be. But with all the
+    content (thesis) already there it was a pretty streamlined process of writing the html. Exporting everything from Obsidian to html 
+    and cleaning it up made the whole process very quck. I knew already from my very first draft, that I wanted to have a lot of
+    marginal space for all the comments and footnotes. I also wanted to use some restrictions for this website. One of them was css name
+    colors only, which was a very fun experience, and forced me to learn some new things. The second (maybe weird) choice was to use html tables. 
+    Some time ago while at work for my student job I had to figure out some problems with a newsletter tool and leard that emails basically
+    only use tables for layouting, because a lot of css things are just not working with emails. Looking through all the html code of these 
+    emails was interesting, as this felt like clash of ages. A newsletter service, with modern build your own website~like tools, shoehoring
+    everything into html tables, because of the restrictions emails have.
+        As I have never really worked with tables before and was interested in "misusing" it a least one time, I decided this was the time. 
+    I think display grid would have also worked. But I still think the base stucture of the html would have been similar to what I ended up
+    with using the table. I like that comments, footnotes and text are pretty close together in the html and not split up. With the first
+    export from obsidian everything was very disconnected.
+        Still one thing that is kind of sad (but okay) is that my idea of one table row per paragraph really did not work out at all. 
+    I wanted the text to be without any longer breaks between paragraphs, but sometimes my comments or footnotes were way longer than the
+    the current paragraph of text – so a table would always have the height of the longest element. With this I had to cheat a bit and
+    put as many paragraphs in one row as it needed to be the longest element in the row. 
+-->
+
+
 <body class="index">
+
+    <div class="thirds"></div>
     <div class="titlecard">
-
-        <nav class="index-chapters">
-            <a class="chapters chapter1" href="./how-did-i-end-up-here.html">How did I <br> end up here?</a>
-            <a class="chapters chapter2" href="./what-are-you-dear-comment.html">What are you, dear comment?</a>
-            <a class="chapters chapter3" href="./a-look-into-the-past.html">A look into the past</a>
-            <a class="chapters chapter4" href="./how-do-you-fit-into-all-of-this-dear-comment.html">How do you fit into all of this, dear comment?</a>
-        
-            <div class="table-of-content1"> Chapter 1 </div>
-            <div class="table-of-content2"> Chapter 2 </div>
-            <div class="table-of-content3"> Chapter 3 </div>
-            <div class="table-of-content4"> Chapter 4 </div>
-
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-            <div class="line4"></div>
-
-            <!-- <div class="end-circle"></div> -->
-        </nav>
-
         <section class="title">
             <h1>Code Marginalia</h1>
             <h2>About Comments in Web Code</h2>
         </section>
+        <menu class="index-chapters">
+            
 
-        <!-- <a href="">are.na</a>  -->
+            <!-- Table of Contents -->
+            <!-- ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ -->
+
+            <!-- Chapter 1 -->
+            <a class="chapter" href="./how-did-i-end-up-here.html">How did I end up here?</a>
+            
+            <!-- Chapter 2 -->
+            <a class="chapter" href="./what-are-you-dear-comment.html">What are you, dear comment?</a>
+            
+            <!-- Chapter 3 -->
+            <a class="chapter" href="./a-look-into-the-past.html">A look into the past</a>
+            
+            <!-- Chapter 4 -->
+            <a class="chapter" href="./how-do-you-fit-into-all-of-this-dear-comment.html">How do you fit into all of this, dear comment?</a>
+    
+            <!-- 
+        
+
+
+                Drafts 
+                ‾‾‾‾‾‾
+                First Draft ~ Idea
+                /drafts/thesis-draft.html
+
+                Obsidian Export / Onepager
+                /drafts/thesis.html
+
+
+
+
+                
+                ⚒ Overview of tools, that helped with making this website ⚒
+                ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+                /tools/index.html
+                
+                Mainly two little sites that helped me on deciding the colors :)
+                You can also try a lot of different color combinations by reloading chapter1 - chapzer 4 
+        
+            -->
+
+
+
+
+
+
+
+                        <!-- old version of the table of contents  -->
+                        <!-- CSS for this part over at /css/old-index.css -->
+                                <!-- <div class="table-of-content1"> Chapter 1 </div>
+                                <div class="table-of-content2"> Chapter 2 </div>
+                                <div class="table-of-content3"> Chapter 3 </div>
+                                <div class="table-of-content4"> Chapter 4 </div> -->
+
+                                <!-- <div class="line1"></div>
+                                <div class="line2"></div>
+                                <div class="line3"></div>
+                                <div class="line4"></div> -->
+
+                                <!-- <div class="end-circle"></div> -->
+        </menu>
+        <details>
+            <summary>About</summary>
+            <article>
+                <section>
+                        <p>Stephan Thiel <br><br></p>
+                        <p>Bachelor Thesis, 2025</p>
+                        <p>HFBK Hamburg</p>
+                </section>
+                <section>
+                    <h3>Advisors</h3>
+                    <p>Konrad Renner</p>
+                    <p>Christoph Knoth</p>
+                    <p>Elisa Linseisen</p>
+                </section>
+            </article>
+        </details>
     </div>
-</main>
 </body>
+
+                                                                                                 <!-- 
+                                                                                                 
+                                                                                                     ✿  ✿              ✿  ✿
+                                                                                                  ✿        ✿        ✿        ✿  
+                                                                                                 ✿            ✿  ✿            ✿
+                                                                                                 ✿                            ✿
+                                                                                                  ✿       first online       ✿
+                                                                                                    ✿       28. April       ✿
+                                                                                                      ✿        2025       ✿
+                                                                                                        ✿               ✿
+                                                                                                          ✿           ✿
+                                                                                                            ✿       ✿
+                                                                                                              ✿   ✿
+                                                                                                                ✿                 --> 
 </html>
 
 
